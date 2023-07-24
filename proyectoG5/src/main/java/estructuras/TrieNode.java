@@ -11,12 +11,14 @@ public class TrieNode {
     private char caracter;
     private boolean isEnd; //es true cuando es una hoja
     private Map<Character, TrieNode> children;
+    private String significado;
     
     //Constructor
     public TrieNode(char caracter){
         this.caracter = caracter;
         this.isEnd = false;
         this.children = new HashMap<>();
+        this.significado = null;
     }
 
     public char getCaracter() {
@@ -50,4 +52,13 @@ public class TrieNode {
     public void addChild(char caracter){
         this.children.put(caracter, new TrieNode(caracter));
     }
+
+    public String getSignificado(String word) {
+        return significado;
+    }
+
+    public void setSignificado(String significado) {
+        this.significado = significado;
+    }
+    
 }

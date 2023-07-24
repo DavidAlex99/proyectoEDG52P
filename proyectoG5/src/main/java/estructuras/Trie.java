@@ -11,10 +11,10 @@ public class Trie {
       
     //Constructor
     public Trie(){
-        this.root = new TrieNode('\0'); 
+        this.root = new TrieNode('\0'); //caracter nulo
     }
     
-    public void insert(String word){
+    public void insert(String word, String significado){
         TrieNode nodoActual = this.root;
         for(char caracter : word.toCharArray()){
             TrieNode child = nodoActual.getChild(caracter);
@@ -24,6 +24,7 @@ public class Trie {
             nodoActual = nodoActual.getChild(caracter);
         }
         nodoActual.setIsEnd(true);
+        nodoActual.setSignificado(significado);//Cada palabra tiene su significado
     }
     
     public boolean search(String word){
@@ -66,6 +67,25 @@ public class Trie {
             }
         }
         return true;
+    }
+
+    public TrieNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(TrieNode root) {
+        this.root = root;
+    }
+    
+    public String getSignificado(String palabra) {
+        TrieNode nodoActual = this.root;
+        for (char caracter : palabra.toCharArray()) {
+            nodoActual = nodoActual.getChild(caracter);
+            if (nodoActual == null) {
+                return null; // La palabra no está en el Trie
+            }
+        }
+        return nodoActual.getSignificado(palabra); // Devuelve el significado de la palabra
     }
     
 }

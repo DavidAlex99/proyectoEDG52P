@@ -10,52 +10,32 @@ public class Main {
     public static void main(String[] args) {
         Trie trie = new Trie();
 
-        // Palabras con prefijos comunes para insertar
-        trie.insert("preparar");
-        trie.insert("prepara");
-        trie.insert("preparación");
-        trie.insert("preparado");
-        trie.insert("preparador");
+        // Palabras con prefijos comunes para insertar con sus significados
+        trie.insert("preparar", "Hacer los arreglos necesarios para algo.");
+        trie.insert("prepara", "Hacer los arreglos iniciales para algo.");
+        trie.insert("preparación", "Acción y efecto de preparar o prepararse.");
+        trie.insert("preparado", "Listo o dispuesto para algo.");
+        trie.insert("preparador", "Que prepara.");
 
-        // Otras palabras para insertar
-        trie.insert("manzana");
-        trie.insert("banana");
-        trie.insert("computadora");
-        trie.insert("teléfono");
-        trie.insert("automóvil");
+        // Otras palabras para insertar con sus significados
+        trie.insert("manzana", "Fruto comestible de forma redonda o acorazonada.");
+        trie.insert("banana", "Fruto alargado de piel gruesa que se pela.");
+        trie.insert("computadora", "Máquina electrónica para procesar y almacenar información.");
+        trie.insert("teléfono", "Dispositivo para transmitir sonidos a distancia.");
+        trie.insert("automóvil", "Vehículo de cuatro ruedas propulsado por un motor.");
 
         // Buscar palabras en el Trie
-        System.out.println("Buscando palabras en el Trie:");
-        System.out.println("Buscar 'preparar': " + trie.search("preparar")); // true
-        System.out.println("Buscar 'preparado': " + trie.search("preparado")); // true
-        System.out.println("Buscar 'preparación': " + trie.search("preparación")); // true
-        System.out.println("Buscar 'prepar': " + trie.search("prepar")); // false (no es palabra completa)
+        System.out.println("¿La palabra 'preparar' está en el Trie? " + trie.search("preparar")); // Debería imprimir true
+        System.out.println("¿La palabra 'preparándose' está en el Trie? " + trie.search("preparándose")); // Debería imprimir false
 
-        System.out.println("Buscar 'manzana': " + trie.search("manzana")); // true
-        System.out.println("Buscar 'banana': " + trie.search("banana")); // true
-        System.out.println("Buscar 'computadora': " + trie.search("computadora")); // true
-        System.out.println("Buscar 'teléfono': " + trie.search("teléfono")); // true
-        System.out.println("Buscar 'automóvil': " + trie.search("automóvil")); // true
+        // Obtener significado de palabras
+        System.out.println("Significado de 'manzana': " + trie.getSignificado("manzana"));
+        System.out.println("Significado de 'preparación': " + trie.getSignificado("preparación"));
+        System.out.println("Significado de 'computadora': " + trie.getSignificado("computadora"));
 
         // Eliminar palabras del Trie
-        System.out.println("\nEliminando palabras del Trie:");
-        System.out.println("Eliminar 'preparado': " + trie.remove("preparado")); // true
-        System.out.println("Buscar 'preparado': " + trie.search("preparado")); // false (ya fue eliminada)
-
-        System.out.println("Eliminar 'manzana': " + trie.remove("manzana")); // true
-        System.out.println("Buscar 'manzana': " + trie.search("manzana")); // false (ya fue eliminada)
-
-        System.out.println("Eliminar 'banana': " + trie.remove("banana")); // true
-        System.out.println("Buscar 'banana': " + trie.search("banana")); // false (ya fue eliminada)
-
-        System.out.println("Eliminar 'computadora': " + trie.remove("computadora")); // true
-        System.out.println("Buscar 'computadora': " + trie.search("computadora")); // false (ya fue eliminada)
-
-        System.out.println("Eliminar 'teléfono': " + trie.remove("teléfono")); // true
-        System.out.println("Buscar 'teléfono': " + trie.search("teléfono")); // false (ya fue eliminada)
-
-        System.out.println("Eliminar 'automóvil': " + trie.remove("automóvil")); // true
-        System.out.println("Buscar 'automóvil': " + trie.search("automóvil")); // false (ya fue eliminada)
+        System.out.println("Eliminar 'banana' del Trie: " + trie.remove("banana")); // Debería imprimir true
+        System.out.println("¿La palabra 'banana' está en el Trie después de eliminarla? " + trie.search("banana")); // Debería imprimir false
     }
 
 }
