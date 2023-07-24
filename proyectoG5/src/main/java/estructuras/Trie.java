@@ -1,5 +1,7 @@
 package estructuras;
 
+import java.util.Stack;
+
 /**
  *
  * @author Ariana
@@ -9,55 +11,61 @@ public class Trie {
       
     //Constructor
     public Trie(){
-        this.root = new TrieNode(' '); 
+        this.root = new TrieNode('\0'); 
     }
     
-    public void insert(String word) {
+    public void insert(String word){
         TrieNode nodoActual = this.root;
-        for (char caracter : word.toCharArray()) {
-            TrieNode child = nodoActual.subNode(caracter);
-            if (child != null) {
-                nodoActual = child;
-            } else {
-                nodoActual.childList.add(new TrieNode(caracter));
-                nodoActual = nodoActual.subNode(caracter);
+        for(char caracter : word.toCharArray()){
+            TrieNode child = nodoActual.getChild(caracter);
+            if(child == null){
+                nodoActual.addChild(caracter);
             }
-            nodoActual.count++;
+            nodoActual = nodoActual.getChild(caracter);
         }
         nodoActual.setIsEnd(true);
     }
     
     public boolean search(String word){
         TrieNode nodoActual = this.root;
-        for(char caracter : word.toCharArray()){
-            if(nodoActual.subNode(caracter) == null){
-                return false;
-            }else{
-                nodoActual = nodoActual.subNode(caracter);
+        for(char caracter: word.toCharArray()){
+            nodoActual = nodoActual.getChild(caracter);
+            if(nodoActual == null){
+                return false; //significa que word no esta en el Trie
             }
         }
-        if(nodoActual.isIsEnd()){
-            return true;
-        }
-        return false;
+        return nodoActual.isIsEnd();
     }
     
-    public void remove(String word){
-        if(search(word) == false){
-            System.out.println(word+", no existe en el Trie");
-        }else{
-            TrieNode nodoActual = this.root;
-            for(char caracter : word.toCharArray()){
-                TrieNode child = nodoActual.subNode(caracter);
-                if(child.count == 1){
-                    nodoActual.childList.remove(child);
-                    return;
-                }else{
-                    child.count--;
-                    nodoActual = child;
-                }
+    public boolean remove(String word){
+        TrieNode nodoActual = this.root;
+        Stack<TrieNode> stack = new Stack<>();
+        for(char caracter: word.toCharArray()){
+            nodoActual = nodoActual.getChild(caracter);
+            if(nodoActual == null){
+                return false;
             }
-            nodoActual.setIsEnd(false);
+            stack.push(nodoActual);
         }
+        if(!nodoActual.isIsEnd()){
+            return false; //significa que word no está en el Trie
+        }
+        nodoActual.setIsEnd(false);
+        
+        while(!stack.isEmpty()){
+            nodoActual = stack.pop(); //recuperamos
+            if(nodoActual.getChildren().isEmpty() && !nodoActual.isIsEnd()){
+                TrieNode padre;
+                if (stack.isEmpty()) {
+                    padre = this.root;
+                } else {
+                    padre = stack.peek();
+                }
+                char caracter = nodoActual.getCaracter();
+                padre.getChildren().remove(caracter);
+            }
+        }
+        return true;
     }
+    
 }

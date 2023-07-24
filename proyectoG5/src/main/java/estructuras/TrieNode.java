@@ -1,7 +1,7 @@
 package estructuras;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -10,26 +10,13 @@ import java.util.List;
 public class TrieNode {
     private char caracter;
     private boolean isEnd; //es true cuando es una hoja
-    int count;
-    List<TrieNode> childList; //representa los enlaces de los nodos
+    private Map<Character, TrieNode> children;
     
     //Constructor
     public TrieNode(char caracter){
-        childList = new LinkedList<>();
-        isEnd = false;
         this.caracter = caracter;
-        count = 0;
-    }
-    
-    public TrieNode subNode(char caracter){
-        if(childList != null){
-            for(TrieNode child : childList){
-                if(child.caracter == caracter){
-                    return child;
-                }
-            }
-        }
-        return null;
+        this.isEnd = false;
+        this.children = new HashMap<>();
     }
 
     public char getCaracter() {
@@ -48,20 +35,19 @@ public class TrieNode {
         this.isEnd = isEnd;
     }
 
-    public int getCount() {
-        return count;
+    public Map<Character, TrieNode> getChildren() {
+        return children;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public List<TrieNode> getChildList() {
-        return childList;
-    }
-
-    public void setChildList(List<TrieNode> childList) {
-        this.childList = childList;
+    public void setChildren(Map<Character, TrieNode> children) {
+        this.children = children;
     }
     
+    public TrieNode getChild(char caracter){
+        return this.children.get(caracter);
+    }
+    
+    public void addChild(char caracter){
+        this.children.put(caracter, new TrieNode(caracter));
+    }
 }
