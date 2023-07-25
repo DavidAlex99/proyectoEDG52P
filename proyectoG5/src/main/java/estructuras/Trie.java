@@ -1,5 +1,7 @@
 package estructuras;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -88,4 +90,26 @@ public class Trie {
         return nodoActual.getSignificado(palabra); // Devuelve el significado de la palabra
     }
     
+    public List<String> buscarPorPrefijo(String prefijo){
+        List<String> sugerencias = new ArrayList<>();
+        TrieNode nodoActual = this.root;
+        for(char caracter: prefijo.toCharArray()){
+            nodoActual = nodoActual.getChild(caracter);
+            if(nodoActual == null){
+                return sugerencias;
+            }
+        }
+        buscarDesdeNodo(prefijo, nodoActual, sugerencias);
+        return sugerencias;
+    }
+    
+    //metodo recursivo que recorre el subarbol apartir de un nodo, obteniendo todas las palabras
+    private void buscarDesdeNodo(String prefijo, TrieNode nodo, List<String> sugerencias){
+        if(nodo.isIsEnd()){
+            sugerencias.add(prefijo);
+        }
+        for(TrieNode child: nodo.getChildren().values()){
+            buscarDesdeNodo(prefijo + child.getCaracter(), child, sugerencias);
+        }
+    }
 }

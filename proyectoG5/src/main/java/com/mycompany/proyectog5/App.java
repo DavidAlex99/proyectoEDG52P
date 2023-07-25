@@ -1,5 +1,8 @@
 package com.mycompany.proyectog5;
 
+import estructuras.Trie;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,5 +40,5 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
+    
 }
