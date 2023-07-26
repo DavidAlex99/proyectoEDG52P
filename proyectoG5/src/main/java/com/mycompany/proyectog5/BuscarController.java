@@ -20,6 +20,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
@@ -31,7 +32,7 @@ import javafx.scene.layout.StackPane;
  * @author Ariana
  */
 public class BuscarController implements Initializable {
-    
+
     private Trie diccionario;
 
     @FXML
@@ -56,38 +57,37 @@ public class BuscarController implements Initializable {
     private Label significado;
 
     @FXML
-    private ComboBox<String> sugerenciasCB;
-    /**
-     * Initializes the controller class.
-     */
+    private ListView<String> sugerenciasListView;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         diccionario = new Trie();
         String ruta = "diccionario.txt";
-        
-        try(BufferedReader br = new BufferedReader(new FileReader(ruta))){
+
+        try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
             String linea;
-            while((linea = br.readLine()) != null){
-                String [] partes = linea.split(":");
-                if(partes.length == 2){
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(":");
+                if (partes.length == 2) {
                     String word = partes[0].trim();
                     String significado = partes[1].trim();
                     diccionario.insert(word, significado);
                 }
             }
-        }catch(IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-    
+
     @FXML
-    public void searchWord(ActionEvent event){
-        String word = busquedaTF.getText().trim();
+    public void searchWord(ActionEvent event) {
+        String palabraRecuperada = busquedaTF.getText().trim();
+        String word = palabraRecuperada.substring(0,1).toUpperCase() + palabraRecuperada.substring(1).toLowerCase();
         String significadoPalabra = diccionario.getSignificado(word);
-        if(significadoPalabra != null){
+        if (significadoPalabra != null) {
             palabraBuscada.setText(word);
             significado.setText(significadoPalabra);
-        }else{
+        } else {
             palabraBuscada.setText("Palabra no encontrada");
             significado.setText("");
 
@@ -95,18 +95,34 @@ public class BuscarController implements Initializable {
             alerta.setTitle("Búsqueda");
             alerta.setHeaderText(null);
             alerta.setContentText("La palabra no se encontró en el diccionario");
-            alerta.showAndWait();//mostrar la alerta
+            alerta.showAndWait(); // mostrar la alerta
         }
     }
-    
+
     @FXML
-    public void showSuggestion(KeyEvent event){
+    public void showSuggestion(KeyEvent event) {
         String palabraIngresada = busquedaTF.getText().trim();
-        List<String> sugerencias = diccionario.buscarPorPrefijo(palabraIngresada);
-        sugerenciasCB.getItems().clear();
-        sugerenciasCB.getItems().addAll(sugerencias);
+        if(!palabraIngresada.isEmpty()){
+            String word = palabraIngresada.substring(0, 1).toUpperCase() + palabraIngresada.substring(1).toLowerCase();
+            List<String> sugerencias = diccionario.buscarPorPrefijo(word);
+            sugerenciasListView.getItems().clear();
+            sugerenciasListView.getItems().addAll(sugerencias);
+
+            sugerenciasListView.setVisible(!sugerencias.isEmpty());
+        }else{
+            sugerenciasListView.getItems().clear();
+            sugerenciasListView.setVisible(false);
+        }
         
-        sugerenciasCB.setVisible(!sugerencias.isEmpty());
     }
-    
+
+    // Método para seleccionar una sugerencia de autocompletado
+    @FXML
+    public void selectSuggestion() {
+        String selectedSuggestion = sugerenciasListView.getSelectionModel().getSelectedItem();
+        if (selectedSuggestion != null) {
+            busquedaTF.setText(selectedSuggestion);
+            sugerenciasListView.setVisible(false);
+        }
+    }
 }
