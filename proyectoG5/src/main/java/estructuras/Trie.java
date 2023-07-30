@@ -16,7 +16,10 @@ public class Trie {
         this.root = new TrieNode('\0'); //caracter nulo
     }
     
-    public void insert(String word, String significado){
+    public boolean insert(String word, String significado){
+        if(word== null || significado == null){
+            return false;
+        }
         TrieNode nodoActual = this.root;
         for(char caracter : word.toCharArray()){
             TrieNode child = nodoActual.getChild(caracter);
@@ -27,6 +30,7 @@ public class Trie {
         }
         nodoActual.setIsEnd(true);
         nodoActual.setSignificado(significado);//Cada palabra tiene su significado
+        return true;
     }
     
     public boolean search(String word){
