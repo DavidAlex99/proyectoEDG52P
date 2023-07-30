@@ -27,6 +27,7 @@
                      </HBox.margin>
                   </VBox>
                   <Button fx:id="buscarBtn" mnemonicParsing="false" onAction="#searchWord" prefHeight="26.0" prefWidth="58.0" text="Buscar" />
+
                   <Button fx:id="insertarBtn" mnemonicParsing="false" onAction="#addWord" prefHeight="26.0" prefWidth="58.0" text="Insertar" />
                   <Button fx:id="eliminarBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="58.0" text="Eliminar" />
                </children>

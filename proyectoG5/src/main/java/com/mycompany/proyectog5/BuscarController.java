@@ -84,7 +84,7 @@ public class BuscarController implements Initializable {
             ex.printStackTrace();
         }
     }
-    
+
     //asociado con el boton Buscar
     @FXML
     public void searchWord(ActionEvent event) {
