@@ -1,8 +1,5 @@
 package com.mycompany.proyectog5;
 
-import estructuras.Trie;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,10 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-
 /**
  * JavaFX App
  */

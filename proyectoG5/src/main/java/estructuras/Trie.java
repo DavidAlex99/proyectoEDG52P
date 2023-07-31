@@ -116,4 +116,9 @@ public class Trie {
             buscarDesdeNodo(prefijo + child.getCaracter(), child, sugerencias);
         }
     }
+
+    public void clear() {
+        this.root = new TrieNode('\0'); // se reinicia el trie
+    }
+
 }

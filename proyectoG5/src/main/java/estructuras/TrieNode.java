@@ -2,6 +2,7 @@ package estructuras;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *
@@ -17,7 +18,7 @@ public class TrieNode {
     public TrieNode(char caracter){
         this.caracter = caracter;
         this.isEnd = false;
-        this.children = new HashMap<>();
+        this.children = new TreeMap<>();
         this.significado = null;
     }
 
