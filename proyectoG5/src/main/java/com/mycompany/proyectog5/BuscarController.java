@@ -2,13 +2,17 @@ package com.mycompany.proyectog5;
 
 import estructuras.Trie;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,6 +23,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -63,6 +68,9 @@ public class BuscarController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        /*
+        Iniciaizacion del diccionario con las palabras
+        */
         diccionario = new Trie();
         String ruta = "Diccionario General.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
@@ -148,12 +156,95 @@ public class BuscarController implements Initializable {
         stage.setScene(new Scene(parent));
         stage.showAndWait(); 
     }
+    
+    /*
+    Se va a arovechar del metodo para escoger una plaabra de las sugeridas
+    */
+    @FXML
+    public void deleteWord(ActionEvent event){
+        //tomando la palabra del textfield
+        String palabraAEliminar = busquedaTF.getText().trim();
+        if(palabraAEliminar.isEmpty()){
+            Alert alerta = new Alert(AlertType.ERROR);
+            alerta.setTitle("Error de búsqueda");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Ingrese la palabra a buscar");
+            alerta.showAndWait();
+        }else{
+            //Primera parte es la letra mayuscula, segunda parte es lo sdemas en minuscula
+            String word = palabraAEliminar.substring(0,1).toUpperCase() + palabraAEliminar.substring(1).toLowerCase();
+            //diccionario es instancia de Trie
+            //obtener el significado de la palabra
+            String significadoPalabraAEliminar = diccionario.getSignificado(word);
+            
+            if (significadoPalabraAEliminar != null) {
+                Alert confirmacion = new Alert(AlertType.CONFIRMATION);
+                confirmacion.setTitle("Confirmar eliminación");
+                confirmacion.setHeaderText(null);
+                confirmacion.setContentText("¿Estás seguro que deseas eliminar la palabra '" + word + "' del diccionario?");
+
+                Optional<ButtonType> respuesta = confirmacion.showAndWait();
+                if (respuesta.isPresent() && respuesta.get() == ButtonType.OK) {
+                    // El usuario confirmó la eliminación
+                    if (diccionario.remove(word)) {
+                        // La palabra fue eliminada correctamente
+                        Alert alerta = new Alert(AlertType.INFORMATION);
+                        alerta.setTitle("Palabra eliminada");
+                        alerta.setHeaderText(null);
+                        alerta.setContentText("La palabra '" + word + "' fue eliminada del diccionario.");
+                        alerta.showAndWait();
+                        
+                        //Paret para modificar el archivo, borrando la palabra que se elimino
+                        String ruta = "Diccionario General.txt";
+                         //Arreglo para guardar las lineas del archivo
+                        List<String> lines = new ArrayList<>();
+                        try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
+                            String linea;
+                            while ((linea = br.readLine()) != null) {
+                                //Si la línea no empieza con la palabra a eliminar, la guardamos
+                                if (!linea.startsWith(word + ":")) {  
+                                    lines.add(linea);
+                                }
+                            }
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
+                        //Se reescribe el archivo con las lineas que quedo
+                        try (BufferedWriter bw = new BufferedWriter(new FileWriter(ruta))) {
+                            for (String line : lines) {
+                                bw.write(line);
+                                bw.newLine();
+                            }
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }   
+                    } else {
+                        // Ocurrió un error al intentar eliminar la palabra
+                        Alert alerta = new Alert(AlertType.ERROR);
+                        alerta.setTitle("Error al eliminar");
+                        alerta.setHeaderText(null);
+                        alerta.setContentText("Ocurrió un error al intentar eliminar la palabra '" + word + "' del diccionario.");
+                        alerta.showAndWait();
+                    }
+                }
+            } else {
+                Alert alerta = new Alert(AlertType.INFORMATION);
+                alerta.setTitle("Búsqueda");
+                alerta.setHeaderText(null);
+                alerta.setContentText("La palabra '" + word + "' no se encontró en el diccionario.");
+                alerta.showAndWait(); // mostrar la alerta
+            }
+        }
+    }
 
     public Trie getDiccionario() {
         return diccionario;
     }
     
-    
+    /*
+    Cargar un nuevo archivo de diccionarios
+    */
     @FXML
     public void cargar(ActionEvent event) throws URISyntaxException {
         FileChooser fileChooser = new FileChooser();
@@ -200,4 +291,6 @@ public class BuscarController implements Initializable {
             alerta.showAndWait();
         }
     }
+    
+    
 }

@@ -94,6 +94,9 @@ public class Trie {
         return nodoActual.getSignificado(palabra); // Devuelve el significado de la palabra
     }
     
+    /*
+    Muestra la lista de sugerencias de palabras conforme se ingresa prefijos
+    */
     public List<String> buscarPorPrefijo(String prefijo){
         List<String> sugerencias = new ArrayList<>();
         TrieNode nodoActual = this.root;
@@ -107,7 +110,9 @@ public class Trie {
         return sugerencias;
     }
     
-    //metodo recursivo que recorre el subarbol apartir de un nodo, obteniendo todas las palabras
+    /*
+    metodo recursivo que recorre el subarbol apartir de un nodo, obteniendo todas las palabras
+    */
     private void buscarDesdeNodo(String prefijo, TrieNode nodo, List<String> sugerencias){
         if(nodo.isIsEnd()){
             sugerencias.add(prefijo);
