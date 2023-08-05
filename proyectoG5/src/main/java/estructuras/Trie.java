@@ -2,7 +2,10 @@ package estructuras;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
+import java.util.TreeSet;
+import javafx.util.Pair;
 
 /**
  *
@@ -119,6 +122,33 @@ public class Trie {
 
     public void clear() {
         this.root = new TrieNode('\0'); // se reinicia el trie
+    }
+    
+    
+    public List<String> getPalabras() {
+        Set<String> palabras = new TreeSet<>();
+
+        Stack<TrieNode> nodeStack = new Stack<>();
+        Stack<String> wordStack = new Stack<>();
+
+        nodeStack.push(this.root);
+        wordStack.push("");
+
+        while (!nodeStack.isEmpty()) {
+            TrieNode nodoActual = nodeStack.pop();
+            String palabraActual = wordStack.pop();
+
+            if (nodoActual.isIsEnd()) {
+                palabras.add(palabraActual);
+            }
+
+            for (TrieNode child : nodoActual.getChildren().values()) {
+                nodeStack.push(child);
+                wordStack.push(palabraActual + child.getCaracter());
+            }
+        }
+
+        return new ArrayList<>(palabras); 
     }
 
 }

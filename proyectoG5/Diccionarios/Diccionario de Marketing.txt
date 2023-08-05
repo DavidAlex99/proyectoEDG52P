@@ -1,0 +1,124 @@
+Análisis: Proceso de recolección y estudio de datos para comprender el mercado y el comportamiento del consumidor.
+Auditoría: Evaluación sistemática de las estrategias y resultados de marketing de una empresa.
+Audiencia: Grupo específico de personas a las que se dirige una campaña o mensaje de marketing.
+Awareness: Conciencia de marca, el grado en que los consumidores reconocen y recuerdan una marca.
+A/B Testing: Prueba de comparación de dos variantes de una campaña para determinar cuál es más efectiva.
+Branding: Construcción de una marca, incluyendo su identidad visual y valores.
+Buyer Persona: Representación semi-ficticia del cliente ideal de una empresa.
+Benchmarking: Comparación de las estrategias de marketing de una empresa con las de la competencia.
+Blog: Plataforma en línea donde se publican regularmente artículos relacionados con una marca o industria.
+Bounce Rate: Tasa de rebote, porcentaje de visitantes de un sitio web que abandonan después de ver una sola página.
+CRM: Customer Relationship Management, gestión de las relaciones con los clientes.
+Call to Action: Llamada a la acción, invitación a que los clientes realicen una acción específica, como comprar o suscribirse.
+Conversion Rate: Tasa de conversión, porcentaje de visitantes de un sitio web que realizan una acción deseada, como una compra.
+Campaña: Estrategia de marketing implementada durante un período específico para lograr objetivos específicos.
+Comercio Electrónico: Venta de productos y servicios a través de Internet.
+Demografía: Datos demográficos como edad, género, ingresos y ubicación, utilizados para segmentar el mercado.
+Diferenciación: Estrategia para destacar y comunicar cómo una marca es única en comparación con la competencia.
+Data Analysis: Análisis de datos para obtener información sobre el comportamiento del consumidor y la efectividad de las estrategias de marketing.
+Distribución: Proceso de llevar un producto desde el fabricante hasta el consumidor final.
+Direct Marketing: Estrategia de marketing que implica comunicarse directamente con los clientes, como a través de correo directo o correo electrónico.
+Estrategia: Plan general para lograr los objetivos de marketing de una empresa.
+Engagement: Nivel de participación e interacción de los consumidores con una marca en línea.
+Email Marketing: Estrategia de marketing que utiliza correos electrónicos para comunicarse con los clientes.
+Experiencia del Cliente: Percepción general que tienen los clientes sobre una marca basada en todas sus interacciones.
+E-commerce: Comercio electrónico, venta de productos y servicios a través de plataformas en línea.
+Fidelización: Estrategias para retener y mantener a los clientes existentes.
+Funnel: Embudo, representación visual del proceso de ventas y conversión de clientes potenciales en compradores.
+Feedback: Retroalimentación de los clientes sobre productos, servicios o experiencias.
+Freemium: Modelo de negocio que ofrece servicios básicos gratuitos y opciones pagas adicionales.
+Focus Group: Grupo de personas que proporcionan comentarios y opiniones sobre productos o campañas de marketing.
+Google Analytics: Herramienta de análisis web que rastrea el tráfico y el comportamiento del usuario en un sitio web.
+Generación de Leads: Estrategias para atraer y capturar información de clientes potenciales interesados en un producto o servicio.
+Guerrilla Marketing: Estrategia de marketing no convencional y creativa para llamar la atención del público.
+Growth Hacking: Técnicas para acelerar el crecimiento de una empresa mediante tácticas innovadoras de marketing.
+Gamificación: Incorporación de elementos de juego en estrategias de marketing para aumentar el compromiso del cliente.
+Hashtag: Etiqueta o palabra clave precedida por el símbolo #, utilizada para agrupar contenido en redes sociales.
+Herramientas de Automatización: Software que automatiza tareas repetitivas de marketing, como correos electrónicos programados o publicaciones en redes sociales.
+Hosting: Servicio que permite a las empresas alojar su sitio web en un servidor en línea.
+Hype: Excitación y expectación generada alrededor de un nuevo producto o lanzamiento.
+HUB: Centro o plataforma centralizada para distribuir contenido y atraer tráfico en línea.
+Influencer: Persona con una audiencia significativa en redes sociales, que puede promocionar productos o servicios de una marca.
+Inbound Marketing: Estrategia que se enfoca en atraer clientes a través de contenido relevante y útil.
+Imágenes: Uso de gráficos y fotografías en campañas de marketing para atraer la atención del público.
+Investigación de Mercado: Recopilación y análisis de datos para comprender el mercado y el comportamiento del consumidor.
+Interactive Content: Contenido interactivo que permite a los consumidores participar y comprometerse con la marca.
+Jingle: Canción corta y pegadiza utilizada en anuncios para promocionar una marca o producto.
+Journey Mapping: Mapeo de los diferentes puntos de contacto y experiencias que tiene un cliente con una marca.
+Jab, Jab, Jab, Right Hook: Estrategia de marketing de Gary Vaynerchuk que enfatiza el valor proporcionado antes de pedir algo a los clientes.
+Just-In-Time Marketing: Estrategia que responde a eventos y tendencias actuales en tiempo real.
+Joint Venture: Asociación comercial entre dos o más empresas para colaborar en una campaña o proyecto.
+Keywords: Palabras clave utilizadas en contenido en línea para mejorar el SEO y la visibilidad en motores de búsqueda.
+KPI: Key Performance Indicator, indicador clave de rendimiento que mide el éxito de una campaña o estrategia.
+Kiosk: Punto de venta o exhibición que muestra productos o información de una marca.
+Knowledge Base: Base de conocimientos en línea que proporciona información útil y ayuda a los clientes.
+Killer Copy: Texto persuasivo y convincente utilizado en anuncios y contenido de marketing.
+Landing Page: Página de destino diseñada para convertir visitantes en clientes potenciales o compradores.
+Lifetime Value (LTV): Valor de por vida del cliente, el ingreso total que se espera que genere un cliente a lo largo de su relación con la marca.
+Lead Magnet: Oferta gratuita o incentivo utilizado para atraer clientes potenciales y obtener su información de contacto.
+Logo: Diseño gráfico que representa una marca y la identifica visualmente.
+Loyalty Program: Programa de fidelidad que recompensa a los clientes por su lealtad y compras frecuentes.
+Market Research: Investigación de mercado para comprender las necesidades y deseos del consumidor.
+Marketing Mix: Mezcla de marketing que incluye los 4 P's: Producto, Precio, Plaza (Distribución) y Promoción.
+Mobile Marketing: Estrategia de marketing que se enfoca en dispositivos móviles y aplicaciones.
+Meme: Contenido en línea, como imágenes o videos, que se comparten y vuelven virales rápidamente.
+Metrics: Métricas utilizadas para medir el éxito de las estrategias de marketing y ventas.
+Niche Marketing: Estrategia que se enfoca en un segmento de mercado específico con necesidades particulares.
+Networking: Construcción de relaciones profesionales y comerciales para promocionar una marca o negocio.
+Native Advertising: Contenido patrocinado que se adapta al formato y tono del medio en el que aparece.
+Newsjacking: Estrategia de marketing que capitaliza eventos o noticias actuales para promocionar una marca.
+Newsletter: Boletín informativo enviado por correo electrónico a suscriptores con contenido relevante.
+Optimization: Optimización de campañas y contenido para mejorar el rendimiento y los resultados.
+Offline Marketing: Estrategias de marketing que no están en línea, como anuncios impresos o eventos en vivo.
+Omnichannel: Estrategia que integra múltiples canales de marketing para brindar una experiencia coherente al cliente.
+Open Rate: Tasa de apertura, porcentaje de correos electrónicos que se abren por destinatarios.
+Outbound Marketing: Estrategia que se enfoca en atraer clientes a través de tácticas de promoción y publicidad.
+Persona: Representación semi-ficticia de un cliente ideal, utilizada para guiar las estrategias de marketing.
+Public Relations (PR): Relaciones públicas, gestión de la comunicación y la imagen de una marca.
+Personalization: Personalización de contenido y mensajes para adaptarse a las necesidades y preferencias del cliente.
+Pay-Per-Click (PPC): Modelo de publicidad en línea donde los anunciantes pagan por cada clic en sus anuncios.
+Podcast: Serie de episodios de audio o video que se distribuyen en línea para una audiencia específica.
+Qualitative Research: Investigación cualitativa, recopilación de datos descriptivos y subjetivos sobre el comportamiento del consumidor.
+Quantitative Research: Investigación cuantitativa, recopilación de datos numéricos y estadísticos para el análisis.
+QR Code: Código de respuesta rápida, código de barras bidimensional que se puede escanear con dispositivos móviles.
+Questionnaire: Cuestionario utilizado para recopilar información y opiniones de los clientes.
+Quick Response (QR) Marketing: Estrategia que utiliza códigos QR para interactuar y atraer a los clientes.
+ROI: Return on Investment, retorno de la inversión, medida de la eficacia de una campaña de marketing en función de los beneficios obtenidos.
+Remarketing: Estrategia que muestra anuncios a usuarios que han interactuado previamente con una marca en línea.
+Retargeting: Técnica de marketing que muestra anuncios específicos a usuarios que han visitado previamente un sitio web.
+Responsive Design: Diseño de sitios web que se adapta y se ve bien en diferentes dispositivos y tamaños de pantalla.
+Rebranding: Proceso de cambio y actualización de la identidad de una marca.
+SEO: Search Engine Optimization, optimización para motores de búsqueda para mejorar el ranking y la visibilidad del sitio web.
+Social Media Marketing: Estrategia de marketing que utiliza plataformas de redes sociales para promocionar una marca.
+Segmentation: Segmentación de mercado, división del mercado en grupos más pequeños y homogéneos.
+Storytelling: Técnica de contar historias para conectar emocionalmente con los consumidores y promover una marca.
+Slogan: Frase corta y pegadiza utilizada en publicidad para resumir la propuesta de valor de una marca.
+Target Audience: Público objetivo, grupo específico de personas al que se dirige una campaña de marketing.
+Trend: Tendencia o moda popular en el comportamiento del consumidor y la industria.
+Testimonials: Testimonios de clientes satisfechos utilizados para respaldar la credibilidad de una marca.
+Trade Show: Feria o exposición donde las empresas muestran y promocionan sus productos y servicios.
+Tagline: Frase o lema que acompaña al logotipo y representa la esencia de una marca.
+User-Generated Content (UGC): Contenido creado por usuarios o clientes que promociona una marca.
+Unique Selling Proposition (USP): Propuesta única de venta, característica distintiva que diferencia a una marca de la competencia.
+Upsell: Técnica de ventas que ofrece a los clientes productos o servicios adicionales.
+User Experience (UX): Experiencia del usuario, la percepción general de un cliente sobre la facilidad de uso y la satisfacción con un producto o sitio web.
+User Interface (UI): Interfaz de usuario, diseño y presentación visual de un sitio web o aplicación.
+Viral Marketing: Estrategia de marketing que utiliza contenido viral y compartible para aumentar el alcance y la visibilidad de una marca.
+Value Proposition: Propuesta de valor, declaración que comunica los beneficios únicos que ofrece una marca.
+Video Marketing: Estrategia que utiliza videos para promocionar una marca o producto.
+Virtual Reality (VR): Realidad virtual, experiencia inmersiva creada por computadora.
+Visibility: Visibilidad en línea, el grado en que una marca es visible en motores de búsqueda y redes sociales.
+Webinar: Seminario en línea que ofrece información o capacitación sobre un tema específico.
+Word of Mouth: Boca a boca, forma de promoción en la que los clientes recomiendan una marca a otros.
+Website: Sitio web, presencia en línea de una marca o empresa.
+White Paper: Informe informativo y detallado sobre un tema específico, utilizado para generar confianza y autoridad.
+Widgets: Pequeñas aplicaciones o herramientas interactivas que se agregan a un sitio web para mejorar la funcionalidad.
+X-factor: Factor único o especial que distingue a una marca y la hace atractiva para los clientes.
+XML Sitemap: Mapa del sitio XML, archivo que lista todas las páginas de un sitio web para facilitar su indexación por los motores de búsqueda.
+YouTube Marketing: Estrategia de marketing que utiliza la plataforma de videos YouTube para promocionar una marca.
+Youth Marketing: Estrategia que se enfoca en atraer y llegar a un público joven.
+Yield Management: Estrategia que ajusta los precios y las ofertas para optimizar los ingresos y la demanda.
+ZMOT: Zero Moment of Truth, momento en que los consumidores investigan y buscan información en línea antes de tomar una decisión de compra.
+Zapier: Herramienta de automatización en línea que conecta diferentes aplicaciones y acciones en línea.
+Zero Waste Marketing: Estrategia que minimiza los recursos utilizados en campañas de marketing para reducir el impacto ambiental.
+Zeitgeist Marketing: Estrategia que aprovecha temas y tendencias actuales para promocionar una marca.

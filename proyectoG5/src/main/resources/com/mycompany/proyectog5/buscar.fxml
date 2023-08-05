@@ -28,7 +28,7 @@
                   </VBox>
                   <Button fx:id="buscarBtn" mnemonicParsing="false" onAction="#searchWord" prefHeight="26.0" prefWidth="58.0" text="Buscar" />
                   <Button fx:id="insertarBtn" mnemonicParsing="false" onAction="#insertar" prefHeight="26.0" prefWidth="58.0" text="Insertar" />
-                  <Button fx:id="eliminarBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="58.0" text="Eliminar" />
+                  <Button fx:id="eliminarBtn" mnemonicParsing="false" onAction="#deleteWord" prefHeight="26.0" prefWidth="58.0" text="Eliminar" />
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
@@ -62,7 +62,7 @@
       </VBox>
    </center>
    <top>
-      <Label text="Diccionario General" BorderPane.alignment="CENTER">
+      <Label fx:id="nombreDiccionario" text="Diccionario General" BorderPane.alignment="CENTER">
          <font>
             <Font size="28.0" />
          </font>
@@ -75,7 +75,7 @@
       <HBox alignment="CENTER" prefHeight="85.0" prefWidth="640.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#cargar" text="Cargar" />
-            <Button mnemonicParsing="false" text="Guardar" />
+            <Button mnemonicParsing="false" onAction="#guardar" text="Guardar" />
          </children>
       </HBox>
    </bottom>

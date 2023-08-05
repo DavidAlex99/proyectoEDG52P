@@ -58,20 +58,20 @@ public class InsertController implements Initializable {
         System.out.println("word: "+word);
         System.out.println("meaning: "+meaning);
         if (word != null && !word.isEmpty() && meaning != null && !meaning.isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("buscar.fxml"));
-            Parent parent = loader.load();
-            BuscarController controller = loader.getController();
-            
-            // se inserta la palabra en el diccionario
-            controller.getDiccionario().insert(word, meaning);
-            System.out.println("Se inserto la palabra?: "+controller.getDiccionario().insert(word, meaning));
-            
-            //se muestra la alerta
+            // Primera letra mayuscula, resto minusculas
+            String palabraModificada = word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
+            String significadoModificado = meaning.substring(0, 1).toUpperCase() + meaning.substring(1).toLowerCase();
+
+            // Insertar la palabra en el diccionario
+            Diccionario.getDiccionario().insert(palabraModificada, significadoModificado);
+            System.out.println("Se inserto la palabra?: "+Diccionario.getDiccionario().insert(word, meaning));
+            // Mostrar la alerta
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Inserción realizada");
             alerta.setHeaderText(null);
             alerta.setContentText("La palabra se ha insertado correctamente en el diccionario");
             alerta.showAndWait();
+
             Stage stage = (Stage) palabra.getScene().getWindow();
             stage.close();
         } else {
@@ -82,6 +82,7 @@ public class InsertController implements Initializable {
             alerta.showAndWait();
         }
     }
+
     
     @FXML
     public void cancelar(ActionEvent event){

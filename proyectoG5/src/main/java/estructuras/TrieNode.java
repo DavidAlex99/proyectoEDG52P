@@ -8,7 +8,7 @@ import java.util.TreeMap;
  *
  * @author Ariana
  */
-public class TrieNode {
+public class TrieNode implements Comparable<TrieNode>{
     private char caracter;
     private boolean isEnd; //es true cuando es una hoja
     private Map<Character, TrieNode> children;
@@ -55,11 +55,20 @@ public class TrieNode {
     }
 
     public String getSignificado(String word) {
-        return significado;
+    if (this.isIsEnd()) {
+        return this.significado;
+    } else {
+        return null;
     }
+}
 
     public void setSignificado(String significado) {
         this.significado = significado;
+    }
+
+    @Override
+    public int compareTo(TrieNode other) {
+        return this.caracter - other.caracter;
     }
     
 }
