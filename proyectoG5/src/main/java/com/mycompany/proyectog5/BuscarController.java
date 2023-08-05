@@ -78,6 +78,11 @@ public class BuscarController implements Initializable {
         this.isGuardado = false;
     }
     
+    @FXML
+    private void cambiar() throws IOException {
+        App.setRoot("menu");
+    }
+    
     //asociado con el boton Buscar
     //busca la palabra ingresada en el textfield y muestra su significado
     @FXML

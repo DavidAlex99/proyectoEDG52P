@@ -61,16 +61,6 @@
          </BorderPane.margin>
       </VBox>
    </center>
-   <top>
-      <Label fx:id="nombreDiccionario" text="Diccionario General" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="28.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets top="30.0" />
-         </BorderPane.margin>
-      </Label>
-   </top>
    <bottom>
       <HBox alignment="CENTER" prefHeight="85.0" prefWidth="640.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
@@ -79,4 +69,20 @@
          </children>
       </HBox>
    </bottom>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="640.0" spacing="125.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#cambiar" text="Regresar">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="nombreDiccionario" contentDisplay="CENTER" text="Diccionario General">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>
