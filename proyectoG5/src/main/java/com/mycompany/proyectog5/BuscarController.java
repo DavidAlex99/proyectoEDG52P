@@ -121,9 +121,15 @@ public class BuscarController implements Initializable {
         if(!palabraIngresada.isEmpty()){
             String word = palabraIngresada.substring(0, 1).toUpperCase() + palabraIngresada.substring(1).toLowerCase();
             List<String> sugerencias = diccionario.buscarPorPrefijo(word);
+            
+             //sugerencia de palabras que ingrese Búsqueda inversa
+            String terminacion = palabraIngresada;
+            List<String> sugerenciasTerminacion = diccionario.buscarPorTerminacion(terminacion);
+            sugerencias.addAll(sugerenciasTerminacion);
+            
             sugerenciasListView.getItems().clear();
             sugerenciasListView.getItems().addAll(sugerencias);
-
+            
             sugerenciasListView.setVisible(!sugerencias.isEmpty());
         }else{
             sugerenciasListView.getItems().clear();
