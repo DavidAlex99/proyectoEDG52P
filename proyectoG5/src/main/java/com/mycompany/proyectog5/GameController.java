@@ -17,6 +17,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -28,6 +30,8 @@ public class GameController implements Initializable {
     private List<Character> combinacionLista;
     private int score;
     private Trie palabras;
+    private int tiempoConfigurado;
+    private int longitudConfigurada;
     
     @FXML
     private Button buscar;
@@ -46,43 +50,51 @@ public class GameController implements Initializable {
 
     @FXML
     private Label tiempo;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         initializeGame();
     }
     
     private void initializeGame() {
+        loadDictionary();
+        selectWordsForGame();
+        generateCombination();
+        startTimer();
+    }
+
+    private void loadDictionary() {
         diccionario = new Trie();
         Diccionario.cargarDiccionario();
-        ///trie con el diccionario
         diccionario = Diccionario.getDiccionario();
-        //lsita con todas las palabras
         palabrasJuego = diccionario.getPalabras();
-        System.out.println(palabrasJuego);
-        
-        //trie que usara el juego
+    }
+
+    private void selectWordsForGame() {
         palabras = new Trie();
         List<String> palabrasSeleccionadas = new ArrayList<>();
         Random random = new Random();
-        while(palabrasSeleccionadas.size() < 5){
+        while (palabrasSeleccionadas.size() < 5) {
             int randomIndex = random.nextInt(palabrasJuego.size());
             String word = palabrasJuego.get(randomIndex);
-            if(!palabrasSeleccionadas.contains(word)){
+            // Filtrar palabras por longitud configurada
+            if (!palabrasSeleccionadas.contains(word) && word.length() == GameOptionsController.getLongitudConfigurada()) {
                 palabrasSeleccionadas.add(word);
             }
         }
-        for(String word : palabrasSeleccionadas){
+        for (String word : palabrasSeleccionadas) {
             palabras.insert(word, diccionario.getSignificado(word));
         }
-        
-        //combinacion de letras
+    }
+
+    private void generateCombination() {
         StringBuilder combinacion = new StringBuilder();
-        for(String word : palabrasSeleccionadas){
+        for (String word : palabras.getPalabras()) {
             combinacion.append(word.toUpperCase());
         }
         
         Set<Character> combinacionFinal = new HashSet<>();
-        for(char letra : combinacion.toString().toCharArray()){
+        for (char letra : combinacion.toString().toCharArray()) {
             combinacionFinal.add(letra);
         }
         
@@ -90,54 +102,71 @@ public class GameController implements Initializable {
         Collections.shuffle(combinacionLista);
         String combinacionString = combinacionLista.stream().map(String::valueOf).collect(Collectors.joining());
         combinacionLabel.setText(combinacionString);
-        
-        //temporizador
-        int time = 120; //tiempo en segundos
+    }
+
+    private void startTimer() {
+        int time = GameOptionsController.getTiempoConfigurado(); // tiempo en segundos
         long startTime = System.currentTimeMillis();
-        int score = 0;
+        score = 0;
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                long currentTime = System.currentTimeMillis();
-                long elapsedTime = currentTime - startTime;
-                long remainingTimeInMillis = TimeUnit.SECONDS.toMillis(time) - elapsedTime;
+        @Override
+        public void run() {
+            long currentTime = System.currentTimeMillis();
+            long elapsedTime = currentTime - startTime;
+            long remainingTimeInMillis = TimeUnit.SECONDS.toMillis(time) - elapsedTime;
 
-                if (remainingTimeInMillis <= 0) {
-                    timer.cancel();
-                    Platform.runLater(() -> {
+            if (remainingTimeInMillis <= 0) {
+                timer.cancel();
+                Platform.runLater(() -> {
                     tiempo.setText("Tiempo agotado");
                     System.out.println("Puntuación final: " + score);
                     System.out.println("Palabras: ");
                     System.out.println(palabras.getPalabras());
-                    });
-                } else {
-                    long remainingTimeInSeconds = TimeUnit.MILLISECONDS.toSeconds(remainingTimeInMillis);
-                    Platform.runLater(() -> {
-                        tiempo.setText("Tiempo: " + remainingTimeInSeconds + " segundos");
-                    });
-                }
+
+                    Alert alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Tiempo agotado");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Se ha agotado el tiempo del juego.");
+                    alert.showAndWait();
+
+                    resultado.clear(); // Limpiar el contenido del TextArea
+                    resultado.setText(palabras.getPalabras().toString());
+                    combinacionLabel.setText(""); // Limpiar la combinación
+                });
+            } else {
+                long remainingTimeInSeconds = TimeUnit.MILLISECONDS.toSeconds(remainingTimeInMillis);
+                Platform.runLater(() -> {
+                    tiempo.setText("Tiempo: " + remainingTimeInSeconds + " segundos");
+                });
             }
-    }, 0, 1000);
+        }
+        }, 0, 1000);
     }
-    
+
     @FXML
-    public void buscarPalabra(ActionEvent event){
+    public void buscarPalabra(ActionEvent event) {
         String palabra = palabraIngresada.getText().toUpperCase();
-        System.out.println("Palabra: "+palabra);
-        if (palabra.length() > 0 && combinacionLista.containsAll(palabra.chars().mapToObj(c -> (char) c).collect(Collectors.toList()))) {
-            palabra = Character.toUpperCase(palabra.charAt(0)) + palabra.substring(1).toLowerCase();
-            System.out.println("palabra: "+palabra);
-            if(palabras.search(palabra)){
-                score += palabra.length();
-                puntaje.setText("Puntaje: "+score);
-                resultado.appendText(palabra + ", es una palabra valida!\n");
-            }else{
-                resultado.appendText("No se encontro la palabra "+palabra+"\n");
-            }
-        }else{
-            resultado.appendText("Palabra invalida o letras no disponibles\n");
+        if (isValidWord(palabra)) {
+            evaluateWord(palabra);
+        } else {
+            resultado.appendText("Palabra inválida o letras no disponibles\n");
         }
         palabraIngresada.clear();
+    }
+
+    private boolean isValidWord(String palabra) {
+        return palabra.length() > 0 && combinacionLista.containsAll(palabra.chars().mapToObj(c -> (char) c).collect(Collectors.toList()));
+    }
+
+    private void evaluateWord(String palabra) {
+        palabra = Character.toUpperCase(palabra.charAt(0)) + palabra.substring(1).toLowerCase();
+        if (palabras.search(palabra)) {
+            score += palabra.length();
+            puntaje.setText("Puntaje: " + score);
+            resultado.appendText(palabra + ", es una palabra válida!\n");
+        } else {
+            resultado.appendText("No se encontró la palabra " + palabra + "\n");
+        }
     }
 }

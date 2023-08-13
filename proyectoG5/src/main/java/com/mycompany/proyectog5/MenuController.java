@@ -25,7 +25,7 @@ public class MenuController {
     private StackPane root;
     
     @FXML
-    private void changeView(String fxmlName){
+    public void changeView(String fxmlName){
         try{
             Node view = FXMLLoader.load(getClass().getResource(fxmlName));
             root.getChildren().setAll(view);
@@ -51,7 +51,7 @@ public class MenuController {
     
     @FXML
     private void gameView(){
-        changeView("game.fxml");
+        changeView("gameOptions.fxml");
     }
     
     
