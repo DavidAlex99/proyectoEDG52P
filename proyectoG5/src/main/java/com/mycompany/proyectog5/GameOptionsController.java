@@ -36,13 +36,19 @@ public class GameOptionsController implements Initializable {
     private ComboBox<Integer> tiempoCb;
     
     @FXML
+    private ComboBox<String> categoriaCb;
+    
+    @FXML
     private BorderPane root;
     
     private List<Integer> tiempo;
     private List<Integer> longitud;
+    private List<String> categorias;
     
     private static int tiempoConfigurado;
     private static int longitudConfigurada;
+    private static String categoria;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tiempo = new ArrayList<>();
@@ -55,12 +61,20 @@ public class GameOptionsController implements Initializable {
         tiempo.add(100);
         tiempo.add(110);
         tiempo.add(120);
+        
         longitud = new ArrayList<>();
         longitud.add(4);
         longitud.add(5);
         longitud.add(6);
         longitud.add(7);
         
+        categorias = new ArrayList<>();
+        categorias.add("General");
+        categorias.add("Marketing");
+        categorias.add("Tecnologico");
+        categorias.add("Moda");
+
+        categoriaCb.getItems().addAll(categorias);
         tiempoCb.getItems().addAll(tiempo);
         longitudCb.getItems().addAll(longitud);
     }    
@@ -76,9 +90,11 @@ public class GameOptionsController implements Initializable {
     @FXML
     private void jugar(ActionEvent event){
         //Se verifica que se hayan seleccionado las opciones en el cb
-        if(tiempoCb.getValue() != null && longitudCb.getValue() != null){
+        if(tiempoCb.getValue() != null && longitudCb.getValue() != null && categoriaCb.getValue() != null){
             GameOptionsController.tiempoConfigurado = tiempoCb.getValue();
             GameOptionsController.longitudConfigurada = longitudCb.getValue();
+            GameOptionsController.categoria = categoriaCb.getValue();
+            Diccionario.setNombre(getCategoria());
             changeView("game.fxml");
             
         }else{
@@ -98,6 +114,11 @@ public class GameOptionsController implements Initializable {
     // Getter para obtener la longitud configurada
     public static int getLongitudConfigurada() {
         return longitudConfigurada;
+    }
+    
+    public static String getCategoria(){
+        System.out.println("Diccionario "+categoria+".txt");
+        return "Diccionario "+categoria+".txt";
     }
     
     @FXML

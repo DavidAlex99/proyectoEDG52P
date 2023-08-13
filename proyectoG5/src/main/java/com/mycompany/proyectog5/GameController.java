@@ -78,7 +78,7 @@ public class GameController implements Initializable {
             int randomIndex = random.nextInt(palabrasJuego.size());
             String word = palabrasJuego.get(randomIndex);
             // Filtrar palabras por longitud configurada
-            if (!palabrasSeleccionadas.contains(word) && word.length() == GameOptionsController.getLongitudConfigurada()) {
+            if (!palabrasSeleccionadas.contains(word) && word.length() <= GameOptionsController.getLongitudConfigurada()) {
                 palabrasSeleccionadas.add(word);
             }
         }
