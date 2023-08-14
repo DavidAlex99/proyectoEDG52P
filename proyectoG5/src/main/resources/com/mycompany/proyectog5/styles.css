@@ -47,5 +47,17 @@
     -fx-padding: 5px 10px;
     
 }
+.combobox {
+    -fx-background-color: #ffb24a;
+    -fx-border-color: #e29500; 
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 2);
+    -fx-padding: 1px 3px;
+    -fx-background-radius: 5px;
+}
+
+
 
 

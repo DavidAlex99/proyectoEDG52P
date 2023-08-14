@@ -13,23 +13,23 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="6.0" prefWidth="640.0" spacing="10.0">
+            <HBox alignment="CENTER" prefHeight="6.0" prefWidth="640.0" spacing="10.0">
                <children>
                   <Label text="Tiempo (segundos): " />
-                  <ComboBox fx:id="tiempoCb" prefWidth="150.0" />
+                  <ComboBox fx:id="tiempoCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="640.0" spacing="10.0">
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="640.0" spacing="10.0">
                <children>
                   <Label text="Longitud de la palabra: " />
-                  <ComboBox fx:id="longitudCb" prefWidth="150.0" />
+                  <ComboBox fx:id="longitudCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
                   <Label text="letras" />
                </children>
             </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="640.0" spacing="10.0">
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="640.0" spacing="10.0">
                <children>
                   <Label text="Categoria: " />
-                  <ComboBox fx:id="categoriaCb" prefWidth="150.0" />
+                  <ComboBox fx:id="categoriaCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
                </children>
             </HBox>
             <Button fx:id="jugarBtn" mnemonicParsing="false" onAction="#jugar" styleClass="boton" stylesheets="@styles.css" text="Jugar" />

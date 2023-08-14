@@ -38,7 +38,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <ScrollPane fx:id="acertadasSP" prefHeight="200.0" prefWidth="200.0">
+                        <ScrollPane fx:id="acertadasSP" prefHeight="200.0" prefWidth="200.0" styleClass="vbox" stylesheets="@styles.css">
                            <content>
                               <TextArea fx:id="acertadas" editable="false" prefHeight="150.0" prefWidth="200.0" />
                            </content>
@@ -52,7 +52,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <ScrollPane fx:id="erradasSP" prefHeight="200.0" prefWidth="200.0">
+                        <ScrollPane fx:id="erradasSP" prefHeight="200.0" prefWidth="200.0" styleClass="vbox" stylesheets="@styles.css">
                            <content>
                               <TextArea fx:id="erradas" editable="false" prefHeight="150.0" prefWidth="200.0" />
                            </content>
