@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -68,14 +69,16 @@ public class BuscarController implements Initializable {
     @FXML
     private Label nombreDiccionario;
     
-    private boolean isGuardado;
+    private static boolean isGuardado;
+    @FXML
+    private Button randomBtn;
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Diccionario.cargarDiccionario();
         diccionario = Diccionario.getDiccionario();
-        this.isGuardado = false;
+        this.isGuardado = true;
     }
     
     @FXML
@@ -338,6 +341,7 @@ public class BuscarController implements Initializable {
                 if (respuesta.isPresent() && respuesta.get() == ButtonType.OK) {
                     // Eliminacion confirmada
                     if (diccionario.remove(word)) {
+                        BuscarController.setIsGuardado(false);
                         limpiarCampos();
                         // La palabra fue eliminada correctamente
                         Alert alerta = new Alert(AlertType.INFORMATION);
@@ -387,5 +391,18 @@ public class BuscarController implements Initializable {
             }
         }
     }
+    
+    @FXML
+    public void searchRandom(ActionEvent event){
+        Random random = new Random();
+        String palabraRandom = diccionario.getPalabras().get(random.nextInt(diccionario.getPalabras().size()));
+        busquedaTF.setText(palabraRandom);
+        searchWord(event);
+    }
+
+    public static void setIsGuardado(boolean isGuardado) {
+        BuscarController.isGuardado = isGuardado;
+    }
+    
 
 }

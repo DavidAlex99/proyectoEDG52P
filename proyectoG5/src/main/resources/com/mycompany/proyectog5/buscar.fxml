@@ -29,6 +29,7 @@
                   <Button fx:id="buscarBtn" mnemonicParsing="false" onAction="#searchWord" prefHeight="26.0" prefWidth="58.0" text="Buscar" />
                   <Button fx:id="insertarBtn" mnemonicParsing="false" onAction="#insertar" prefHeight="26.0" prefWidth="58.0" text="Insertar" />
                   <Button fx:id="eliminarBtn" mnemonicParsing="false" onAction="#deleteWord" prefHeight="26.0" prefWidth="58.0" text="Eliminar" />
+                  <Button fx:id="randomBtn" mnemonicParsing="false" onAction="#searchRandom" text="Random" />
                </children>
                <VBox.margin>
                   <Insets top="20.0" />

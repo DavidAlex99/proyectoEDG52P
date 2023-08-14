@@ -65,6 +65,7 @@ public class InsertController implements Initializable {
             // Insertar la palabra en el diccionario
             Diccionario.getDiccionario().insert(palabraModificada, significadoModificado);
             System.out.println("Se inserto la palabra?: "+Diccionario.getDiccionario().insert(word, meaning));
+            BuscarController.setIsGuardado(false); //cuando se inserta una palabra, el boolean cambia a no guardado
             // Mostrar la alerta
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Inserción realizada");
