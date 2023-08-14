@@ -234,16 +234,15 @@ public class GameController implements Initializable {
     }
     
     private void mostrarVictoria(Stage stage) {
+        // Cancelar el temporizador si el jugador gana antes de que el tiempo se agote
+        if (timer != null) {
+            timer.cancel();
+        }
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("¡Victoria!");
         alert.setHeaderText(null);
         alert.setContentText("¡Has encontrado todas las palabras válidas!\nPuntaje final: " + score);
         alert.showAndWait();
-
-        // Cancelar el temporizador si el jugador gana antes de que el tiempo se agote
-        if (timer != null) {
-            timer.cancel();
-        }
         jugarOtraVez(stage);
     }
 

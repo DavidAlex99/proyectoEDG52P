@@ -1,0 +1,51 @@
+.root {
+    -fx-background-color: #ADC5CF;
+}
+
+.boton {
+    -fx-background-color: #ffb24a;
+    -fx-text-fill: black;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e29500;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 2);
+}
+
+.textfield {
+    -fx-background-color: transparent; 
+    -fx-border-color: #7e93ab; 
+    -fx-border-width: 0 0 2 0; /*solo borde inferior*/
+    -fx-text-fill: black; 
+}
+
+.listview {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent; /*borde transparente*/
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 2);
+}
+
+.vbox {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 10px;
+    -fx-border-color: #7e93ab; /* Color del borde */
+    -fx-border-width: 3px; /* Ancho del borde */
+    -fx-border-radius: 10px;
+    -fx-border-style: solid;
+    -fx-padding: 10px; 
+}
+
+.titulo {
+    -fx-text-fill: #17264f;
+    -fx-font-family: "Nunito";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    
+}
+
+

@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.GameController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.GameController">
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="tiempo" text="Tiempo: 0" />
-            <TextField fx:id="palabraIngresada" />
-            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscarPalabra" text="Buscar" />
+            <TextField fx:id="palabraIngresada" styleClass="textfield" stylesheets="@styles.css" />
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscarPalabra" styleClass="boton" stylesheets="@styles.css" text="Buscar" />
             <Label fx:id="puntaje" text="Puntos: 0" />
          </children>
       </HBox>
@@ -24,7 +24,7 @@
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="combinacionLabel" text="combinacion">
+            <Label fx:id="combinacionLabel" styleClass="titulo" stylesheets="@styles.css" text="combinacion">
                <font>
                   <Font size="27.0" />
                </font>
@@ -33,14 +33,14 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label prefWidth="133.0" text="Palabras Acertadas">
+                        <Label prefWidth="133.0" stylesheets="@styles.css" text="Palabras Acertadas">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                         <ScrollPane fx:id="acertadasSP" prefHeight="200.0" prefWidth="200.0">
                            <content>
-                              <TextArea fx:id="acertadas" prefHeight="150.0" prefWidth="200.0" />
+                              <TextArea fx:id="acertadas" editable="false" prefHeight="150.0" prefWidth="200.0" />
                            </content>
                         </ScrollPane>
                      </children>
@@ -54,7 +54,7 @@
                         </Label>
                         <ScrollPane fx:id="erradasSP" prefHeight="200.0" prefWidth="200.0">
                            <content>
-                              <TextArea fx:id="erradas" prefHeight="150.0" prefWidth="200.0" />
+                              <TextArea fx:id="erradas" editable="false" prefHeight="150.0" prefWidth="200.0" />
                            </content>
                         </ScrollPane>
                      </children>
