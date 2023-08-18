@@ -58,6 +58,23 @@
     -fx-background-radius: 5px;
 }
 
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 2);
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+    -fx-background-color: transparent;
+    -fx-border-color: #7e93ab; /* Borde */
+    -fx-border-width: 0 0 1px 0; /* Borde solo en la parte inferior */
+    -fx-text-fill: black;
+    -fx-padding: 5px 10px;
+}
+
 
 
 

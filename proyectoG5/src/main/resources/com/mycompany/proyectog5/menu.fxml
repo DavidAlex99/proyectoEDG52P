@@ -30,7 +30,7 @@
                               <Image url="@../../../imagenes/historial.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="historialBtn" mnemonicParsing="false" onAction="#historialView" prefHeight="25.0" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Historial" />
+                        <Button fx:id="estadisticasBtn" mnemonicParsing="false" onAction="#estadisticasView" prefHeight="25.0" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Estadisticas" />
                      </children>
                   </VBox>
                </children>

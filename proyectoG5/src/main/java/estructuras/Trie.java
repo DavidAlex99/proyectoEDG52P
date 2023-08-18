@@ -170,5 +170,28 @@ public class Trie {
         }
         return sugerencias;
     } 
+    
+    public int getTotalWords() {
+        int total = 0;
+
+        Stack<TrieNode> nodeStack = new Stack<>();
+
+        nodeStack.push(this.root);
+
+        while (!nodeStack.isEmpty()) {
+            TrieNode nodoActual = nodeStack.pop();
+
+            if (nodoActual.isIsEnd()) {
+                total++;
+            }
+
+            for (TrieNode child : nodoActual.getChildren().values()) {
+                nodeStack.push(child);
+            }
+        }
+
+        return total;
+    }
+
 
 }

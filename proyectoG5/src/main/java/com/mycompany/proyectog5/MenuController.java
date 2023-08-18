@@ -13,7 +13,7 @@ public class MenuController {
     private Button buscarBtn;
 
     @FXML
-    private Button historialBtn;
+    private Button estadisticasBtn;
 
     @FXML
     private Button juegoBtn;
@@ -40,8 +40,8 @@ public class MenuController {
     }
     
     @FXML
-    private void historialView(){
-        changeView("historial.fxml");
+    private void estadisticasView(){
+        changeView("estadisticas.fxml");
     }
     
     @FXML

@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="371.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.InsertController">
+<StackPane prefHeight="371.0" prefWidth="415.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.InsertController">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
             <VBox layoutX="48.0" layoutY="68.0" prefHeight="236.0" prefWidth="319.0" spacing="10.0">
                <children>
                   <Label text="Palabra" />
-                  <TextField fx:id="palabra" />
+                  <TextField fx:id="palabra" styleClass="textfield" stylesheets="@styles.css" />
                   <Label text="Significado" />
-                  <TextArea fx:id="significado" prefHeight="143.0" prefWidth="335.0" />
-                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="319.0" spacing="20.0">
+                  <TextArea fx:id="significado" prefHeight="143.0" prefWidth="335.0" styleClass="vbox" stylesheets="@styles.css" />
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="319.0" spacing="20.0">
                      <children>
-                        <Button fx:id="insertarBtn" mnemonicParsing="false" onAction="#guardar" text="Insertar" />
-                        <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+                        <Button fx:id="insertarBtn" mnemonicParsing="false" onAction="#guardar" styleClass="boton" stylesheets="@styles.css" text="Insertar" />
+                        <Button mnemonicParsing="false" onAction="#cancelar" styleClass="boton" stylesheets="@styles.css" text="Cancelar" />
                      </children>
                   </HBox>
                </children>

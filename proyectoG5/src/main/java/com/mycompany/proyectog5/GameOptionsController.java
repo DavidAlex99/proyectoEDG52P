@@ -41,6 +41,9 @@ public class GameOptionsController implements Initializable {
     @FXML
     private BorderPane root;
     
+    @FXML
+    private Button backBtn;
+    
     private List<Integer> tiempo;
     private List<Integer> longitud;
     private List<String> categorias;
@@ -129,5 +132,10 @@ public class GameOptionsController implements Initializable {
         }catch(IOException ex){
             System.out.println("no se puedo cargar la vista: "+fxmlName);
         }
+    }
+    
+    @FXML
+    private void cambiar() throws IOException {
+        App.setRoot("menu");
     }
 }
