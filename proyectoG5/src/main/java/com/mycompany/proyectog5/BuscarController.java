@@ -25,6 +25,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -73,6 +74,9 @@ public class BuscarController implements Initializable {
     private static boolean isGuardado;
     @FXML
     private Button randomBtn;
+    
+    @FXML
+    private ComboBox<String> tipoBusqueda;
 
 
     @Override
@@ -80,6 +84,9 @@ public class BuscarController implements Initializable {
         Diccionario.cargarDiccionario();
         diccionario = Diccionario.getDiccionario();
         this.isGuardado = true;
+        
+        tipoBusqueda.getItems().addAll("Prefijo", "Terminación");
+        tipoBusqueda.setValue("Prefijo");
     }
     
     @FXML
@@ -122,14 +129,17 @@ public class BuscarController implements Initializable {
     @FXML
     public void showSuggestion(KeyEvent event) {
         String palabraIngresada = busquedaTF.getText().trim();
+        String tipoBusqueda2 = tipoBusqueda.getSelectionModel().getSelectedItem(); 
+        
         if(!palabraIngresada.isEmpty()){
             String word = palabraIngresada.substring(0, 1).toUpperCase() + palabraIngresada.substring(1).toLowerCase();
-            List<String> sugerencias = diccionario.buscarPorPrefijo(word);
-            
-             //sugerencia de palabras que ingrese Búsqueda inversa
-            String terminacion = palabraIngresada;
-            List<String> sugerenciasTerminacion = diccionario.buscarPorTerminacion(terminacion);
-            sugerencias.addAll(sugerenciasTerminacion);
+            List<String> sugerencias = new ArrayList<>();
+
+            if (tipoBusqueda2.equals("Prefijo")) {
+                sugerencias = diccionario.buscarPorPrefijo(word);
+            } else if (tipoBusqueda2.equals("Terminación")) {
+                sugerencias = diccionario.buscarPorTerminacion(palabraIngresada);
+            }
             
             sugerenciasListView.getItems().clear();
             sugerenciasListView.getItems().addAll(sugerencias);
