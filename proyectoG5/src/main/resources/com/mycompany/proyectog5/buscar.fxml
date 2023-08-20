@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" prefHeight="480.0" prefWidth="640.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.BuscarController">
+<BorderPane fx:id="root" prefHeight="480.0" prefWidth="640.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.BuscarController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -77,6 +78,7 @@
          <children>
             <TextField fx:id="busquedaTF" onKeyReleased="#showSuggestion" prefWidth="150.0" promptText="Ingrese una palabra" styleClass="textfield" stylesheets="@styles.css" />
             <ListView fx:id="sugerenciasListView" onMouseClicked="#selectSuggestion" prefHeight="115.0" prefWidth="144.0" styleClass="listview" stylesheets="@styles.css" visible="false" />
+            <ComboBox fx:id="tipoBusqueda" onAction="#showSuggestion" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
          </children>
          <BorderPane.margin>
             <Insets left="20.0" right="20.0" />
