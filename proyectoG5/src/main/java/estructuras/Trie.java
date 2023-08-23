@@ -193,5 +193,56 @@ public class Trie {
         return total;
     }
 
+    private int distanciaLevenshtein(String palabra1, String palabra2) {
+        int m = palabra1.length();
+        int n = palabra2.length();
+
+        int[][] dp = new int[m + 1][n + 1];
+
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
+                if (i == 0) {
+                    dp[i][j] = j;
+                } else if (j == 0) {
+                    dp[i][j] = i;
+                } else if (palabra1.charAt(i - 1) == palabra2.charAt(j - 1)) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else {
+                    dp[i][j] = 1 + Math.min(dp[i - 1][j], Math.min(dp[i][j - 1], dp[i - 1][j - 1]));
+                }
+            }
+        }
+
+        return dp[m][n];
+    }
+
+    public List<String> buscarAproximado(String consulta, int maxDistancia) {
+        List<String> sugerencias = new ArrayList<>();
+
+        Stack<TrieNode> nodeStack = new Stack<>();
+        Stack<String> wordStack = new Stack<>();
+
+        nodeStack.push(this.root);
+        wordStack.push("");
+
+        while (!nodeStack.isEmpty()) {
+            TrieNode nodoActual = nodeStack.pop();
+            String palabraActual = wordStack.pop();
+
+            if (nodoActual.isIsEnd() && distanciaLevenshtein(palabraActual, consulta) <= maxDistancia) {
+                sugerencias.add(palabraActual);
+            }
+
+            for (TrieNode child : nodoActual.getChildren().values()) {
+                nodeStack.push(child);
+                wordStack.push(palabraActual + child.getCaracter());
+            }
+        }
+
+        return sugerencias;
+    }
+
+
+
 
 }

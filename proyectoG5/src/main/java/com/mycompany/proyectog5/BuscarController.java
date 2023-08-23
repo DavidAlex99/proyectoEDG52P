@@ -85,7 +85,7 @@ public class BuscarController implements Initializable {
         diccionario = Diccionario.getDiccionario();
         this.isGuardado = true;
         
-        tipoBusqueda.getItems().addAll("Prefijo", "Terminación");
+        tipoBusqueda.getItems().addAll("Prefijo", "Terminación", "Aproximado");
         tipoBusqueda.setValue("Prefijo");
     }
     
@@ -139,6 +139,9 @@ public class BuscarController implements Initializable {
                 sugerencias = diccionario.buscarPorPrefijo(word);
             } else if (tipoBusqueda2.equals("Terminación")) {
                 sugerencias = diccionario.buscarPorTerminacion(palabraIngresada);
+            }else if (tipoBusqueda2.equals("Aproximado")) {
+                int distanciaMaxima = 1; // Define tu distancia máxima aquí
+                sugerencias = diccionario.buscarAproximado(word, distanciaMaxima);
             }
             
             sugerenciasListView.getItems().clear();
@@ -151,6 +154,7 @@ public class BuscarController implements Initializable {
         }
         
     }
+
 
     // Método para seleccionar una sugerencia de autocompletado
     @FXML

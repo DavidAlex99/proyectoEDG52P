@@ -22,6 +22,7 @@ Calendario : Tabla que muestra los días, semanas y meses de un año, organizado
 Camisa : Prenda de vestir que cubre el torso y los brazos, generalmente con botones en la parte delantera.
 Cancion : Composición musical con letra que se canta.
 Casa : Edificio destinado para ser habitado por personas.
+Caza: Actividad de perseguir y capturar animales, ya sea con fines alimenticios, deportivos o recreativos.
 Cielo : Espacio que se extiende sobre la Tierra, donde se ven las estrellas, el sol y la luna.
 Computadora : Máquina electrónica para procesar y almacenar información.
 Cuchara : Utensilio de cocina con mango y una parte cóncava que se usa para tomar y servir alimentos líquidos o semilíquidos.
