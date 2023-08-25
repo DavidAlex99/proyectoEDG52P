@@ -12,6 +12,7 @@ import java.io.IOException;
 public class Diccionario {
     private static Trie diccionario = new Trie();
     private static String nombreDiccionario = "Diccionario General.txt";
+    
     public static Trie getDiccionario() {
         return diccionario;
     }

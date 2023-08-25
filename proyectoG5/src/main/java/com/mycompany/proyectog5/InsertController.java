@@ -50,7 +50,7 @@ public class InsertController implements Initializable {
     public String getMeaning(){
         return meaning;
     }
-    
+    //guarda en el trie la palabra
     @FXML
     public void guardar() throws IOException {
         word = palabra.getText().trim();

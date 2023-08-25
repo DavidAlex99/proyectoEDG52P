@@ -10,7 +10,7 @@ import java.util.TreeMap;
 public class TrieNode implements Comparable<TrieNode>{
     private char caracter;
     private boolean isEnd; //es true cuando es una hoja
-    private Map<Character, TrieNode> children;
+    private Map<Character, TrieNode> children; //almacena los nodos hijos
     private String significado;
     
     //Constructor

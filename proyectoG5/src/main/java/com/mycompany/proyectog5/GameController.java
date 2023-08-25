@@ -121,20 +121,20 @@ public class GameController implements Initializable {
         for (String word : palabras.getPalabras()) {
             combinacion.append(word.toUpperCase());
         }
-        
+        //para eliminar caracteres repetidos
         Set<Character> combinacionFinal = new HashSet<>();
         for (char letra : combinacion.toString().toCharArray()) {
-            combinacionFinal.add(letra);
+            combinacionFinal.add(letra); //se agregan las letras al set
         }
         
         combinacionLista = new ArrayList<>(combinacionFinal);
-        Collections.shuffle(combinacionLista);
-        StringBuilder combinacionBuilder = new StringBuilder();
+        Collections.shuffle(combinacionLista);//se mezcla la combinacion
+        StringBuilder combinacionBuilder = new StringBuilder(); 
         for (Character c : combinacionLista) {
             combinacionBuilder.append(c);
             combinacionBuilder.append(" ");
         }
-        String combinacionString = combinacionBuilder.toString();
+        String combinacionString = combinacionBuilder.toString(); //combinacion final
         combinacionLabel.setText(combinacionString);
     }
 

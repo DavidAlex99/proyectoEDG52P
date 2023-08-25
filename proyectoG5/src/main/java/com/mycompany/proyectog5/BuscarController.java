@@ -135,7 +135,8 @@ public class BuscarController implements Initializable {
         if(!palabraIngresada.isEmpty()){
             String word = palabraIngresada.substring(0, 1).toUpperCase() + palabraIngresada.substring(1).toLowerCase();
             List<String> sugerencias = new ArrayList<>();
-
+            
+            //se verifica el tipo de busqueda
             if (tipoBusqueda2.equals("Prefijo")) {
                 sugerencias = diccionario.buscarPorPrefijo(word);
             } else if (tipoBusqueda2.equals("Terminación")) {

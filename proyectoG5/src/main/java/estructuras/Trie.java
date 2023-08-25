@@ -20,51 +20,63 @@ public class Trie {
         this.root = new TrieNode('\0'); //caracter nulo
     }
     
+    //Inserta caracter por caracter al trie
     public boolean insert(String word, String significado){
         if(word== null || significado == null){
             return false;
         }
         TrieNode nodoActual = this.root;
+        //se recorre cada caracter de la palabra a insertar
         for(char caracter : word.toCharArray()){
+            // Se verifica si ya existe un nodo hijo para el carácter actual
             TrieNode child = nodoActual.getChild(caracter);
             if(child == null){
-                nodoActual.addChild(caracter);
+                nodoActual.addChild(caracter); //si no existe se agrega un nodo hijo a ese caracter
             }
-            nodoActual = nodoActual.getChild(caracter);
+            nodoActual = nodoActual.getChild(caracter);//se actualiza al nodo siguiente
         }
-        nodoActual.setIsEnd(true);
+        nodoActual.setIsEnd(true); //como ya es una palabra, es true
         nodoActual.setSignificado(significado);//Cada palabra tiene su significado
         return true;
     }
     
+    
     public boolean search(String word){
         TrieNode nodoActual = this.root;
+        //se recorre cada caracter de esa palabra
         for(char caracter: word.toCharArray()){
+            //se verifica si ya existe un nodo hijo para ese caracter
             nodoActual = nodoActual.getChild(caracter);
             if(nodoActual == null){
                 return false; //significa que word no esta en el Trie
             }
         }
+        //al terminar de recorrer la palabrar(estar al final) se retorna si es una palabra o no
         return nodoActual.isIsEnd();
     }
     
     public boolean remove(String word){
         TrieNode nodoActual = this.root;
-        Stack<TrieNode> stack = new Stack<>();
+        Stack<TrieNode> stack = new Stack<>(); //se almacenan los nodos
         for(char caracter: word.toCharArray()){
+            //se almacena el nodo hijo del primer caracter de la palabra
             nodoActual = nodoActual.getChild(caracter);
             if(nodoActual == null){
                 return false;
             }
             stack.push(nodoActual);
         }
+        //si el nodoFinal no representa el final de la palabra...
         if(!nodoActual.isIsEnd()){
             return false; //significa que word no está en el Trie
         }
+        
+        //se marca la palabra como no final para proceder a eliminar la palabra del trie
         nodoActual.setIsEnd(false);
         
         while(!stack.isEmpty()){
             nodoActual = stack.pop(); //recuperamos
+            //se verifica que no se tenga hijos y que no sea un nodo final (significa que el nodo se puede eliminar)
             if(nodoActual.getChildren().isEmpty() && !nodoActual.isIsEnd()){
                 TrieNode padre;
                 if (stack.isEmpty()) {
@@ -72,8 +84,8 @@ public class Trie {
                 } else {
                     padre = stack.peek();
                 }
-                char caracter = nodoActual.getCaracter();
-                padre.getChildren().remove(caracter);
+                char caracter = nodoActual.getCaracter(); //caracter del nodo actual
+                padre.getChildren().remove(caracter); //se elimina el caracter y nodo del trie
             }
         }
         return true;
@@ -98,6 +110,7 @@ public class Trie {
         return nodoActual.getSignificado(palabra); // Devuelve el significado de la palabra
     }
     
+    
     public List<String> buscarPorPrefijo(String prefijo){
         List<String> sugerencias = new ArrayList<>();
         TrieNode nodoActual = this.root;
@@ -113,10 +126,13 @@ public class Trie {
     
     //metodo recursivo que recorre el subarbol apartir de un nodo, obteniendo todas las palabras
     private void buscarDesdeNodo(String prefijo, TrieNode nodo, List<String> sugerencias){
+        //si el prefijo ya es una palabra se lo añade a la lista de sugerencias
         if(nodo.isIsEnd()){
             sugerencias.add(prefijo);
         }
+        //si no, itera sobre los hijos del nodo
         for(TrieNode child: nodo.getChildren().values()){
+            //buscar a partir del nuevo prefijo y nuevo hijo
             buscarDesdeNodo(prefijo + child.getCaracter(), child, sugerencias);
         }
     }
@@ -168,7 +184,7 @@ public class Trie {
             if (nodoActual.isIsEnd() && palabraActual.endsWith(terminacion)) {
                 sugerencias.add(palabraActual);
             }
-
+            //iteramos sobre los hijos 
             for (TrieNode child : nodoActual.getChildren().values()) {
                 nodeQueue.offer(child);
                 wordQueue.offer(palabraActual + child.getCaracter());
@@ -192,7 +208,7 @@ public class Trie {
             if (nodoActual.isIsEnd()) {
                 total++;
             }
-
+            //iteramos sobre los hijos de ese nodo
             for (TrieNode child : nodoActual.getChildren().values()) {
                 nodeStack.push(child);
             }
