@@ -1,65 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="root" prefHeight="480.0" prefWidth="640.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.MenuController">
+<StackPane fx:id="root" alignment="TOP_CENTER" prefHeight="480.0" prefWidth="640.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.MenuController">
    <children>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="421.0" spacing="40.0">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="421.0" spacing="80.0">
          <children>
+            <Label styleClass="titulo" stylesheets="@styles.css" text="Menu" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../imagenes/search.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="buscarBtn" mnemonicParsing="false" onAction="#searchView" prefHeight="25.0" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Buscar" />
+                        <Button fx:id="buscarBtn" mnemonicParsing="false" onAction="#searchView" prefHeight="25.0" prefWidth="90.0" styleClass="boton" stylesheets="@styles.css" text="Buscar" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../imagenes/historial.png" />
+                              <Image url="@../../../imagenes/estadisticas.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="estadisticasBtn" mnemonicParsing="false" onAction="#estadisticasView" prefHeight="25.0" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Estadisticas" />
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
-               <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../imagenes/bookmark.png" />
-                           </image>
-                        </ImageView>
-                        <Button fx:id="marcadorBtn" mnemonicParsing="false" onAction="#bookmarkView" prefHeight="25.0" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Marcador" />
+                        <Button fx:id="estadisticasBtn" mnemonicParsing="false" onAction="#estadisticasView" prefHeight="25.0" prefWidth="90.0" styleClass="boton" stylesheets="@styles.css" text="Estadisticas" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../imagenes/game.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="juegoBtn" mnemonicParsing="false" onAction="#gameView" prefHeight="25.0" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Juego" />
+                        <Button fx:id="juegoBtn" mnemonicParsing="false" onAction="#gameView" prefHeight="25.0" prefWidth="90.0" styleClass="boton" stylesheets="@styles.css" text="Juego" />
                      </children>
                   </VBox>
                </children>
             </HBox>
          </children>
+         <StackPane.margin>
+            <Insets top="20.0" />
+         </StackPane.margin>
       </VBox>
    </children>
 </StackPane>

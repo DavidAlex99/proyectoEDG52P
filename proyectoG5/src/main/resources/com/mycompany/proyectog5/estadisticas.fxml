@@ -12,14 +12,17 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectog5.EstadisticasController">
    <bottom>
-      <Label fx:id="lblConteo" alignment="CENTER" contentDisplay="CENTER" BorderPane.alignment="CENTER" />
+      <Label fx:id="lblConteo" alignment="CENTER" contentDisplay="CENTER" styleClass="texto-general" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin></Label>
    </bottom>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="287.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER" prefHeight="77.0" prefWidth="600.0" spacing="10.0">
                <children>
-                  <Label text="Diccionario: " />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="Diccionario: " />
                   <ComboBox fx:id="diccionarioCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
                   <Button fx:id="calcular" mnemonicParsing="false" onAction="#calcularEstadisticas" styleClass="boton" stylesheets="@styles.css" text="Calcular" />
                </children>

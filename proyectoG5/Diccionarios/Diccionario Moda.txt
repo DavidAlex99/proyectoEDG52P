@@ -1,124 +1,92 @@
-Alta costura: Moda de diseño y confección de prendas de lujo y alta calidad.
-Abrigo: Prenda exterior larga y pesada para protegerse del frío.
-Accesorios: Elementos complementarios como joyas, cinturones o bufandas.
-Anorak: Chaqueta acolchada y resistente al agua, ideal para clima frío.
-Anteojos de sol: Gafas de sol que protegen los ojos de los rayos UV.
-Bolsa: Accesorio para llevar objetos personales, también conocido como bolso o cartera.
-Bermudas: Pantalones cortos, generalmente hasta la rodilla.
-Blusa: Prenda de vestir ligera y holgada, generalmente para mujeres.
-Botas: Calzado que cubre el pie y la pierna, con diversas alturas y estilos.
-Boutique: Tienda de moda que ofrece prendas y accesorios exclusivos.
-Camiseta: Prenda de manga corta y cuello redondo, básica en el vestuario.
-Chaqueta: Prenda ligera de vestir que cubre el torso y los brazos.
-Corbata: Accesorio para el cuello, común en trajes formales masculinos.
-Couture: Moda de alta costura con prendas hechas a medida.
-Couturier: Diseñador de moda que crea prendas de alta costura.
-Diseñador: Profesional creativo que diseña prendas y accesorios de moda.
-Denim: Tejido resistente, comúnmente utilizado en pantalones vaqueros.
-Diseño: Proceso creativo de concebir y visualizar nuevas prendas o colecciones.
-Desfile: Presentación de moda en una pasarela, mostrando las nuevas colecciones.
-Dior: Marca de moda de lujo fundada por Christian Dior.
-Estilo: Características distintivas que definen la moda de una persona o época.
-Elegante: Estilo sofisticado y refinado en la forma de vestir.
-Escote: Abertura en la parte superior de una prenda, alrededor del cuello.
-Estampado: Diseño impreso o tejido en una prenda, como flores o rayas.
-Eco-friendly: Moda que se preocupa por el medio ambiente y la sostenibilidad.
-Falda: Prenda inferior que cubre desde la cintura hasta las rodillas o los tobillos.
-Fashion week: Semana de la moda en la que se presentan las nuevas colecciones.
-Feria de moda: Evento comercial donde se exhiben y venden prendas y accesorios.
-Fibra natural: Material textil obtenido de fuentes naturales, como el algodón o la seda.
-Faux fur: Material sintético que imita la piel de animales, utilizado en abrigos.
-Gafas de sol: Accesorio para proteger los ojos de los rayos solares.
-Gabardina: Abrigo ligero y resistente al agua, con cinturón para ajustar la cintura.
-Glamour: Estilo de moda lujoso y sofisticado.
-Gorro: Accesorio para cubrir la cabeza, como gorras o sombreros.
-Ganchillo: Técnica de tejido con aguja de gancho para crear prendas y accesorios.
-Haute couture: Alta costura en francés, moda de diseño y confección de lujo.
-Hecho a medida: Prendas confeccionadas específicamente para el cliente.
-Hippie: Estilo de moda inspirado en la contracultura de los años 60 y 70.
-Hombros al aire: Prendas que dejan al descubierto los hombros.
-Hermès: Marca de moda de lujo conocida por sus accesorios y marroquinería.
-Indumentaria: Conjunto de prendas de vestir y accesorios que conforman un atuendo.
-Innovación: Introducción de ideas y conceptos nuevos en la moda.
-It-bag: Bolso de diseñador que se convierte en una tendencia y objeto de deseo.
-Ikat: Técnica de teñido y diseño de telas con patrones tradicionales.
-Invierno: Temporada en la que se utilizan prendas más abrigadas y pesadas.
-Jeans: Pantalones vaqueros de tela denim, comúnmente llamados jeans.
-Joyería: Accesorios decorativos como collares, pulseras y anillos.
-Jersey: Prenda de punto, también conocida como suéter o pullover.
-Jumpsuit: Prenda única que combina pantalón y top, conocido como mono.
-Jean-Paul Gaultier: Diseñador de moda francés conocido por su estilo vanguardista.
-Kimono: Prenda tradicional japonesa de tela ligera y amplia, generalmente de seda.
-Kitten heels: Zapatos de tacón bajo y delgado, cómodos y elegantes.
-Kohl: Maquillaje de ojos a base de polvo negro o gris, utilizado desde la antigüedad.
-Kaftan: Túnica larga y suelta, generalmente con detalles bordados o estampados.
-Karl Lagerfeld: Famoso diseñador de moda y director creativo de Chanel.
-Lencería: Ropa interior femenina, como sujetadores y ropa de dormir.
-Lookbook: Colección de fotografías que muestran una nueva línea de moda.
-Lunares: Estampado de círculos repetidos en una prenda o tela.
-Lanvin: Marca de moda francesa fundada por Jeanne Lanvin en 1889.
-Leather: Cuero, material utilizado en prendas y accesorios de moda.
-Moda: Industria y tendencias relacionadas con el vestuario y la apariencia personal.
-Marca: Identidad y logotipo distintivo de una casa de moda.
-Maquillaje: Productos y técnicas utilizadas para embellecer el rostro.
-Mangas acampanadas: Estilo de manga que se ensancha hacia abajo.
-Midi: Largo de falda que llega hasta la mitad de la pantorrilla.
-Nail art: Arte de decorar y pintar las uñas con diseños creativos.
-Náutico: Estilo de moda inspirado en la ropa marinera y los colores navales.
-Nylon: Material sintético utilizado en medias y prendas deportivas.
-Nudo: Técnica de atar prendas o accesorios para darles un estilo único.
-Neopreno: Material flexible y resistente al agua, utilizado en trajes de neopreno y moda deportiva.
-Outfit: Conjunto de prendas y accesorios coordinados que conforman un atuendo.
-Oversize: Prendas de tallas más grandes de lo habitual, con estilo holgado.
-Ojotas: Sandalias planas y abiertas, también conocidas como chanclas o flip-flops.
-Oxford: Estilo de zapato cerrado y plano con cordones, originalmente masculino.
-Organza: Tela transparente y ligera, a menudo utilizada en vestidos de noche.
-Pasarela: Plataforma donde los modelos muestran las prendas en un desfile de moda.
-Pantalón: Prenda de vestir que cubre las piernas, con diferentes estilos y cortes.
-Peluquería: Establecimiento donde se corta, peina y tiñe el cabello.
-Piel sintética: Material artificial que imita la apariencia de la piel de animales.
-Punk: Estilo de moda caracterizado por su actitud rebelde y prendas desgarradas.
-Quimono: Prenda tradicional japonesa similar al kimono, con mangas más cortas.
-Quilted: Técnica de acolchado que crea un diseño en relieve en las prendas.
-Quilted: Técnica de acolchado que crea un diseño en relieve en las prendas.
-Quilted: Técnica de acolchado que crea un diseño en relieve en las prendas.
-Quilted: Técnica de acolchado que crea un diseño en relieve en las prendas.
-Ropa: Prendas de vestir que conforman el vestuario de una persona.
-Rayas: Diseño de líneas paralelas en una prenda o tela.
-Retro: Estilo de moda inspirado en tendencias pasadas, generalmente de los años 50 y 60.
-Ropa deportiva: Prendas diseñadas específicamente para actividades físicas.
-Ralph Lauren: Diseñador de moda estadounidense conocido por su estilo preppy.
-Seda: Tela suave y brillante producida por los gusanos de seda.
-Sombrero: Accesorio para cubrir la cabeza, con diversos estilos y formas.
-Sneakers: Zapatillas deportivas, también conocidas como tenis.
-Streetwear: Estilo de moda urbana y casual inspirado en la cultura de la calle.
-Stilettos: Zapatos de tacón alto y delgado, elegantes y sensuales.
-Tendencia: Dirección o estilo popular en la moda en un momento específico.
-Traje: Conjunto de chaqueta y pantalón o falda, generalmente para ocasiones formales.
-Tejido: Material textil creado mediante hilos entrelazados.
-Tatuaje temporal: Diseño decorativo que se aplica temporalmente en la piel.
-Trench coat: Abrigo largo y resistente al agua, con detalles militares.
-Unisex: Prendas de moda que son adecuadas para hombres y mujeres.
-Urban: Estilo de moda inspirado en la vida de la ciudad y la cultura urbana.
-Uniforme: Ropa utilizada por un grupo específico, como estudiantes o empleados.
-Ultra-violeta: Color del año 2018 según Pantone, tono de púrpura intenso.
-Uñas de gel: Técnica de uñas artificiales hechas con gel endurecido.
-Vintage: Prendas de moda de épocas pasadas, generalmente de los años 20 a los 90.
-Vaqueros: Pantalones de mezclilla, también conocidos como jeans.
-Velvet: Tela suave y lujosa de terciopelo, utilizada en prendas de noche.
-Vestido: Prenda de una pieza que cubre el torso y se extiende hacia abajo.
-Vogue: Revista de moda internacionalmente reconocida.
-Waistcoat: Chaleco sin mangas que se usa sobre una camisa.
-Waterproof: Prendas o accesorios resistentes al agua.
-Wardrobe: Vestuario o conjunto de prendas que posee una persona.
-Wool: Lana, material cálido utilizado en prendas de invierno.
-Wrap dress: Vestido cruzado que se ajusta alrededor de la cintura.
-X-ray dress: Vestido diseñado con elementos transparentes o de encaje que imitan rayos X.
-X-treme sports: Deportes extremos, como el skateboarding o el surf.
-Yves Saint Laurent: Diseñador de moda francés conocido por su estilo elegante y moderno.
-Yarn: Hilo utilizado en tejidos y tejidos de punto.
-Zapato: Calzado que cubre el pie y protege de la intemperie.
-Zipper: Cremallera, cierre de tela con dientes metálicos o plásticos.
-Zigzag: Diseño de líneas en forma de zigzag en una prenda o tela.
-Zara: Marca de moda internacional conocida por su ropa asequible y de tendencia.
-Zuhair Murad: Diseñador de moda libanés conocido por sus exquisitos vestidos de noche.
+Abrigo : Prenda exterior larga y pesada para protegerse del frío.
+Accesorios : Elementos complementarios como joyas, cinturones o bufandas.
+Anorak : Chaqueta acolchada y resistente al agua, ideal para clima frío.
+Bermudas : Pantalones cortos, generalmente hasta la rodilla.
+Blusa : Prenda de vestir ligera y holgada, generalmente para mujeres.
+Bolsa : Accesorio para llevar objetos personales, también conocido como bolso o cartera.
+Botas : Calzado que cubre el pie y la pierna, con diversas alturas y estilos.
+Boutique : Tienda de moda que ofrece prendas y accesorios exclusivos.
+Camiseta : Prenda de manga corta y cuello redondo, básica en el vestuario.
+Chaqueta : Prenda ligera de vestir que cubre el torso y los brazos.
+Corbata : Accesorio para el cuello, común en trajes formales masculinos.
+Couture : Moda de alta costura con prendas hechas a medida.
+Couturier : Diseñador de moda que crea prendas de alta costura.
+Denim : Tejido resistente, comúnmente utilizado en pantalones vaqueros.
+Desfile : Presentación de moda en una pasarela, mostrando las nuevas colecciones.
+Dior : Marca de moda de lujo fundada por Christian Dior.
+Diseñador : Profesional creativo que diseña prendas y accesorios de moda.
+Diseño : Proceso creativo de concebir y visualizar nuevas prendas o colecciones.
+Elegante : Estilo sofisticado y refinado en la forma de vestir.
+Escote : Abertura en la parte superior de una prenda, alrededor del cuello.
+Estampado : Diseño impreso o tejido en una prenda, como flores o rayas.
+Estilo : Características distintivas que definen la moda de una persona o época.
+Falda : Prenda inferior que cubre desde la cintura hasta las rodillas o los tobillos.
+Gabardina : Abrigo ligero y resistente al agua, con cinturón para ajustar la cintura.
+Ganchillo : Técnica de tejido con aguja de gancho para crear prendas y accesorios.
+Glamour : Estilo de moda lujoso y sofisticado.
+Gorro : Accesorio para cubrir la cabeza, como gorras o sombreros.
+Hippie : Estilo de moda inspirado en la contracultura de los años 60 y 70.
+Ikat : Técnica de teñido y diseño de telas con patrones tradicionales.
+Indumentaria : Conjunto de prendas de vestir y accesorios que conforman un atuendo.
+Innovación : Introducción de ideas y conceptos nuevos en la moda.
+Invierno : Temporada en la que se utilizan prendas más abrigadas y pesadas.
+Jeans : Pantalones vaqueros de tela denim, comúnmente llamados jeans.
+Jersey : Prenda de punto, también conocida como suéter o pullover.
+Joyería : Accesorios decorativos como collares, pulseras y anillos.
+Jumpsuit : Prenda única que combina pantalón y top, conocido como mono.
+Kaftan : Túnica larga y suelta, generalmente con detalles bordados o estampados.
+Kimono : Prenda tradicional japonesa de tela ligera y amplia, generalmente de seda.
+Kohl : Maquillaje de ojos a base de polvo negro o gris, utilizado desde la antigüedad.
+Lanvin : Marca de moda francesa fundada por Jeanne Lanvin en 1889.
+Leather : Cuero, material utilizado en prendas y accesorios de moda.
+Lencería : Ropa interior femenina, como sujetadores y ropa de dormir.
+Lookbook : Colección de fotografías que muestran una nueva línea de moda.
+Lunares : Estampado de círculos repetidos en una prenda o tela.
+Maquillaje : Productos y técnicas utilizadas para embellecer el rostro.
+Marca : Identidad y logotipo distintivo de una casa de moda.
+Midi : Largo de falda que llega hasta la mitad de la pantorrilla.
+Moda : Industria y tendencias relacionadas con el vestuario y la apariencia personal.
+Neopreno : Material flexible y resistente al agua, utilizado en trajes de neopreno y moda deportiva.
+Nudo : Técnica de atar prendas o accesorios para darles un estilo único.
+Nylon : Material sintético utilizado en medias y prendas deportivas.
+Náutico : Estilo de moda inspirado en la ropa marinera y los colores navales.
+Ojotas : Sandalias planas y abiertas, también conocidas como chanclas o flip-flops.
+Organza : Tela transparente y ligera, a menudo utilizada en vestidos de noche.
+Outfit : Conjunto de prendas y accesorios coordinados que conforman un atuendo.
+Oversize : Prendas de tallas más grandes de lo habitual, con estilo holgado.
+Oxford : Estilo de zapato cerrado y plano con cordones, originalmente masculino.
+Pantalón : Prenda de vestir que cubre las piernas, con diferentes estilos y cortes.
+Pasarela : Plataforma donde los modelos muestran las prendas en un desfile de moda.
+Peluquería : Establecimiento donde se corta, peina y tiñe el cabello.
+Punk : Estilo de moda caracterizado por su actitud rebelde y prendas desgarradas.
+Quilted : Técnica de acolchado que crea un diseño en relieve en las prendas.
+Quimono : Prenda tradicional japonesa similar al kimono, con mangas más cortas.
+Rayas : Diseño de líneas paralelas en una prenda o tela.
+Retro : Estilo de moda inspirado en tendencias pasadas, generalmente de los años 50 y 60.
+Ropa : Prendas de vestir que conforman el vestuario de una persona.
+Seda : Tela suave y brillante producida por los gusanos de seda.
+Sneakers : Zapatillas deportivas, también conocidas como tenis.
+Sombrero : Accesorio para cubrir la cabeza, con diversos estilos y formas.
+Stilettos : Zapatos de tacón alto y delgado, elegantes y sensuales.
+Streetwear : Estilo de moda urbana y casual inspirado en la cultura de la calle.
+Tatuaje temporal : Diseño decorativo que se aplica temporalmente en la piel.
+Tejido : Material textil creado mediante hilos entrelazados.
+Tendencia : Dirección o estilo popular en la moda en un momento específico.
+Traje : Conjunto de chaqueta y pantalón o falda, generalmente para ocasiones formales.
+Uniforme : Ropa utilizada por un grupo específico, como estudiantes o empleados.
+Unisex : Prendas de moda que son adecuadas para hombres y mujeres.
+Urban : Estilo de moda inspirado en la vida de la ciudad y la cultura urbana.
+Vaqueros : Pantalones de mezclilla, también conocidos como jeans.
+Velvet : Tela suave y lujosa de terciopelo, utilizada en prendas de noche.
+Vestido : Prenda de una pieza que cubre el torso y se extiende hacia abajo.
+Vintage : Prendas de moda de épocas pasadas, generalmente de los años 20 a los 90.
+Vogue : Revista de moda internacionalmente reconocida.
+Waistcoat : Chaleco sin mangas que se usa sobre una camisa.
+Wardrobe : Vestuario o conjunto de prendas que posee una persona.
+Waterproof : Prendas o accesorios resistentes al agua.
+Wool : Lana, material cálido utilizado en prendas de invierno.
+Yarn : Hilo utilizado en tejidos y tejidos de punto.
+Zapato : Calzado que cubre el pie y protege de la intemperie.
+Zara : Marca de moda internacional conocida por su ropa asequible y de tendencia.
+Zigzag : Diseño de líneas en forma de zigzag en una prenda o tela.
+Zipper : Cremallera, cierre de tela con dientes metálicos o plásticos.

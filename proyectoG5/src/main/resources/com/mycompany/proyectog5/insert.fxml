@@ -13,11 +13,11 @@
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <VBox layoutX="48.0" layoutY="68.0" prefHeight="236.0" prefWidth="319.0" spacing="10.0">
+            <VBox layoutX="48.0" layoutY="30.0" prefHeight="274.0" prefWidth="319.0" spacing="10.0">
                <children>
-                  <Label text="Palabra" />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="Palabra" />
                   <TextField fx:id="palabra" styleClass="textfield" stylesheets="@styles.css" />
-                  <Label text="Significado" />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="Significado" />
                   <TextArea fx:id="significado" prefHeight="143.0" prefWidth="335.0" styleClass="vbox" stylesheets="@styles.css" />
                   <HBox alignment="CENTER" prefHeight="49.0" prefWidth="319.0" spacing="20.0">
                      <children>

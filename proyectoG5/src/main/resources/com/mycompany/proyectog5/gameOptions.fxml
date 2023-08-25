@@ -15,24 +15,24 @@
          <children>
             <HBox alignment="CENTER" prefHeight="6.0" prefWidth="640.0" spacing="10.0">
                <children>
-                  <Label text="Tiempo (segundos): " />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="Tiempo (segundos): " />
                   <ComboBox fx:id="tiempoCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="0.0" prefWidth="640.0" spacing="10.0">
                <children>
-                  <Label text="Longitud de la palabra: " />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="Longitud de la palabra: " />
                   <ComboBox fx:id="longitudCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
-                  <Label text="letras" />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="letras" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="0.0" prefWidth="640.0" spacing="10.0">
                <children>
-                  <Label text="Categoria: " />
+                  <Label styleClass="texto-general" stylesheets="@styles.css" text="Categoria: " />
                   <ComboBox fx:id="categoriaCb" prefWidth="150.0" styleClass="combobox" stylesheets="@styles.css" />
                </children>
             </HBox>
-            <Button fx:id="jugarBtn" mnemonicParsing="false" onAction="#jugar" styleClass="boton" stylesheets="@styles.css" text="Jugar" />
+            <Button fx:id="jugarBtn" mnemonicParsing="false" onAction="#jugar" prefWidth="70.0" styleClass="boton" stylesheets="@styles.css" text="Jugar" />
          </children>
       </VBox>
    </center>

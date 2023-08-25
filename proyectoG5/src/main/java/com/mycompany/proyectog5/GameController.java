@@ -132,6 +132,7 @@ public class GameController implements Initializable {
         StringBuilder combinacionBuilder = new StringBuilder();
         for (Character c : combinacionLista) {
             combinacionBuilder.append(c);
+            combinacionBuilder.append(" ");
         }
         String combinacionString = combinacionBuilder.toString();
         combinacionLabel.setText(combinacionString);
@@ -278,6 +279,12 @@ public class GameController implements Initializable {
         } else {
             changeView("menu.fxml", currentStage);
         }
+    }
+    
+    @FXML
+    private void cambiar() throws IOException {
+        timer.cancel();
+        App.setRoot("menu");
     }
     
 }

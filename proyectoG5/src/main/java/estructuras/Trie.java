@@ -1,11 +1,12 @@
 package estructuras;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 import java.util.TreeSet;
-import javafx.util.Pair;
 
 /**
  *
@@ -153,23 +154,30 @@ public class Trie {
     
     public List<String> buscarPorTerminacion(String terminacion) {
         List<String> sugerencias = new ArrayList<>();
-        Stack<TrieNode> nodeStack = new Stack<>();
-        Stack<String> wordStack = new Stack<>();
-        nodeStack.push(this.root);
-        wordStack.push("");
-        while (!nodeStack.isEmpty()) {
-            TrieNode nodoActual = nodeStack.pop();
-            String palabraActual = wordStack.pop();
+
+        Queue<TrieNode> nodeQueue = new LinkedList<>();
+        Queue<String> wordQueue = new LinkedList<>();
+
+        nodeQueue.offer(this.root);
+        wordQueue.offer("");
+
+        while (!nodeQueue.isEmpty()) {
+            TrieNode nodoActual = nodeQueue.poll();
+            String palabraActual = wordQueue.poll();
+
             if (nodoActual.isIsEnd() && palabraActual.endsWith(terminacion)) {
                 sugerencias.add(palabraActual);
             }
+
             for (TrieNode child : nodoActual.getChildren().values()) {
-                nodeStack.push(child);
-                wordStack.push(palabraActual + child.getCaracter());
+                nodeQueue.offer(child);
+                wordQueue.offer(palabraActual + child.getCaracter());
             }
         }
+
         return sugerencias;
-    } 
+    }
+
     
     public int getTotalWords() {
         int total = 0;
@@ -219,28 +227,29 @@ public class Trie {
     public List<String> buscarAproximado(String consulta, int maxDistancia) {
         List<String> sugerencias = new ArrayList<>();
 
-        Stack<TrieNode> nodeStack = new Stack<>();
-        Stack<String> wordStack = new Stack<>();
+        Queue<TrieNode> nodeQueue = new LinkedList<>();
+        Queue<String> wordQueue = new LinkedList<>();
 
-        nodeStack.push(this.root);
-        wordStack.push("");
+        nodeQueue.offer(this.root);
+        wordQueue.offer("");
 
-        while (!nodeStack.isEmpty()) {
-            TrieNode nodoActual = nodeStack.pop();
-            String palabraActual = wordStack.pop();
+        while (!nodeQueue.isEmpty()) {
+            TrieNode nodoActual = nodeQueue.poll();
+            String palabraActual = wordQueue.poll();
 
-            if (nodoActual.isIsEnd() && distanciaLevenshtein(palabraActual, consulta) <= maxDistancia) {
+            if (nodoActual.isIsEnd() && palabraActual.length() == consulta.length() && distanciaLevenshtein(palabraActual, consulta) <= maxDistancia) {
                 sugerencias.add(palabraActual);
             }
 
             for (TrieNode child : nodoActual.getChildren().values()) {
-                nodeStack.push(child);
-                wordStack.push(palabraActual + child.getCaracter());
+                nodeQueue.offer(child);
+                wordQueue.offer(palabraActual + child.getCaracter());
             }
         }
 
         return sugerencias;
     }
+
 
 
 

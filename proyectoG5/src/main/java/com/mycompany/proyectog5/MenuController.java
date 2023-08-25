@@ -19,9 +19,6 @@ public class MenuController {
     private Button juegoBtn;
 
     @FXML
-    private Button marcadorBtn;
-
-    @FXML
     private StackPane root;
     
     @FXML
@@ -42,11 +39,6 @@ public class MenuController {
     @FXML
     private void estadisticasView(){
         changeView("estadisticas.fxml");
-    }
-    
-    @FXML
-    private void bookmarkView(){
-        changeView("bookmark.fxml");
     }
     
     @FXML

@@ -81,6 +81,7 @@ public class BuscarController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Diccionario.setNombre("Diccionario General.txt");
         Diccionario.cargarDiccionario();
         diccionario = Diccionario.getDiccionario();
         this.isGuardado = true;
@@ -140,7 +141,7 @@ public class BuscarController implements Initializable {
             } else if (tipoBusqueda2.equals("Terminación")) {
                 sugerencias = diccionario.buscarPorTerminacion(palabraIngresada);
             }else if (tipoBusqueda2.equals("Aproximado")) {
-                int distanciaMaxima = 1; // Define tu distancia máxima aquí
+                int distanciaMaxima = 2; // numero de letras que pueden diferir de la palabra a consultar
                 sugerencias = diccionario.buscarAproximado(word, distanciaMaxima);
             }
             

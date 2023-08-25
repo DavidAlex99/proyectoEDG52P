@@ -1,124 +1,89 @@
-API: Interfaz de programación de aplicaciones, un conjunto de reglas y protocolos que permiten a las aplicaciones comunicarse entre sí o con un sistema operativo.
-AI: Inteligencia artificial, la capacidad de las máquinas para aprender, razonar y realizar tareas que normalmente requieren inteligencia humana.
-ARM: Arquitectura de microprocesadores utilizada comúnmente en dispositivos móviles y sistemas embebidos.
-AWS: Servicios web de Amazon, una plataforma que ofrece almacenamiento, computación y otros servicios en la nube.
-Azure: Plataforma de servicios en la nube proporcionada por Microsoft que ofrece servicios de infraestructura, desarrollo y análisis de datos.
-Big Data: Conjunto de datos muy grandes y complejos que requiere tecnologías avanzadas para su almacenamiento y análisis.
-Blockchain: Tecnología de registro distribuido que permite crear registros seguros y transparentes de transacciones o activos.
-Bit: La unidad más pequeña de información en la computación, que puede ser 0 o 1 en un sistema binario.
-Boot: Proceso de iniciar una computadora y cargar el sistema operativo en la memoria.
-Browser: Navegador web, una aplicación que permite a los usuarios acceder y navegar por sitios web en Internet.
-Cloud Computing: Computación en la nube, que permite acceder a recursos de TI a través de Internet bajo demanda.
-CPU: Unidad central de procesamiento, el cerebro de una computadora que realiza cálculos y ejecuta instrucciones.
-CSS: Lenguaje de hojas de estilo utilizado para controlar la apariencia y el diseño de páginas web.
-Cybersecurity: Seguridad cibernética, medidas y prácticas para proteger sistemas y datos de amenazas y ataques cibernéticos.
-Cryptography: Criptografía, técnica de cifrado y descifrado de datos para garantizar su seguridad y confidencialidad.
-Data Mining: Minería de datos, proceso de descubrir patrones y conocimientos útiles a partir de grandes conjuntos de datos.
-Database: Base de datos, una colección organizada de datos almacenados y accesibles electrónicamente.
-Deep Learning: Aprendizaje profundo, una subrama de la inteligencia artificial que utiliza redes neuronales para realizar tareas complejas.
-DNS: Sistema de nombres de dominio, que traduce los nombres de dominio en direcciones IP.
-Docker: Plataforma de contenedores que permite empaquetar, distribuir y ejecutar aplicaciones en entornos aislados.
-Encryption: Encriptación, proceso de codificación de datos para protegerlos de accesos no autorizados.
-Edge Computing: Computación en el borde, que procesa datos cerca de la fuente, reduciendo la latencia y el uso de ancho de banda.
-Ethernet: Tecnología de red que permite la comunicación de datos a través de cables de cobre o fibra óptica.
-E-commerce: Comercio electrónico, compra y venta de bienes y servicios a través de Internet.
-Emoticon: Representación gráfica de una expresión facial o una emoción, como :-) para indicar una sonrisa.
-Firewall: Cortafuegos, un sistema de seguridad que controla el tráfico de red y protege una red de accesos no autorizados.
-Firmware: Software almacenado en un chip de hardware, utilizado para controlar la funcionalidad de dispositivos y componentes.
-FTP: Protocolo de transferencia de archivos, utilizado para enviar y recibir archivos a través de Internet.
-Function: Función, un bloque de código que realiza una tarea específica y puede ser llamado desde otras partes del programa.
-Framework: Marco de trabajo, una estructura o plataforma que proporciona herramientas y bibliotecas para desarrollar aplicaciones más fácilmente.
-GUI: Interfaz gráfica de usuario, una forma visual de interactuar con un programa o sistema operativo.
-GPS: Sistema de posicionamiento global, que utiliza satélites para determinar la ubicación geográfica precisa.
-GPU: Unidad de procesamiento de gráficos, que acelera el procesamiento de imágenes y gráficos en computadoras.
-Google: Una de las principales compañías tecnológicas del mundo, conocida por su motor de búsqueda y servicios en línea.
-Gigabyte: Una unidad de medida de almacenamiento que equivale a aproximadamente mil millones de bytes.
-HTML: Lenguaje de marcado utilizado para crear páginas web y definir su estructura y contenido.
-HTTP: Protocolo de transferencia de hipertexto, utilizado para la comunicación entre clientes y servidores web.
-Hacker: Una persona experta en seguridad informática que utiliza sus habilidades para encontrar vulnerabilidades en sistemas y redes.
-Hard Drive: Disco duro, un dispositivo de almacenamiento permanente en una computadora que guarda datos magnéticamente.
-HDMI: Interfaz multimedia de alta definición, que permite la transmisión de audio y video en alta calidad.
-IoT: Internet de las cosas, la interconexión de dispositivos inteligentes a través de Internet para recopilar y compartir datos.
-IP Address: Dirección IP, una serie de números que identifica de manera única un dispositivo en una red.
-IDE: Entorno de desarrollo integrado, una aplicación que facilita la escritura, compilación y depuración de código.
-Intel: Una de las principales compañías de tecnología del mundo, conocida por sus procesadores y componentes para computadoras.
-Interface: Interfaz, un medio o punto de comunicación entre dos sistemas o dispositivos.
-JavaScript: Un lenguaje de programación ampliamente utilizado para agregar interactividad y dinamismo a sitios web.
-JPEG: Un formato de compresión de imágenes ampliamente utilizado para fotografías digitales.
-Java: Un lenguaje de programación popular utilizado en el desarrollo de aplicaciones de software.
-JSON: Un formato de intercambio de datos ligero y fácil de leer, basado en la sintaxis de JavaScript.
-Joomla: Un sistema de gestión de contenido (CMS) utilizado para crear y administrar sitios web.
-Kernel: Núcleo, el componente central del sistema operativo que gestiona los recursos y facilita la comunicación entre el hardware y el software.
-Keyboard: Teclado, dispositivo de entrada que permite al usuario introducir texto y comandos en una computadora.
-Kilobyte: Una unidad de medida de almacenamiento que equivale a aproximadamente mil bytes.
-Kubernetes: Una plataforma de código abierto para automatizar el despliegue, el escalado y la gestión de aplicaciones en contenedores.
-Keyword: Palabra clave, una palabra o frase utilizada para buscar información en un motor de búsqueda.
-Linux: Un sistema operativo de código abierto basado en Unix, ampliamente utilizado en servidores y dispositivos embebidos.
-LAN: Red de área local, una red que conecta dispositivos en un área geográfica limitada, como una oficina o un hogar.
-LCD: Pantalla de cristal líquido, una tecnología de visualización utilizada en televisores, monitores y dispositivos móviles.
-Latency: Latencia, el tiempo que tarda un paquete de datos en viajar desde la fuente hasta el destino en una red.
-Login: Inicio de sesión, el proceso de autenticación para acceder a una cuenta o sistema.
-Machine Learning: Aprendizaje automático, un enfoque de la inteligencia artificial que permite a las máquinas aprender y mejorar a partir de datos.
-Megabyte: Una unidad de medida de almacenamiento que equivale a aproximadamente un millón de bytes.
-Malware: Software malicioso, programas diseñados para dañar, acceder o robar información de un sistema sin autorización.
-Motherboard: Placa base, la placa principal en una computadora que conecta y comunica todos los componentes del sistema.
-Microprocessor: Microprocesador, el procesador central de una computadora en un solo chip.
-Network: Red, una colección de dispositivos y sistemas interconectados que comparten recursos y datos.
-Node.js: Un entorno de tiempo de ejecución de JavaScript que permite a los desarrolladores ejecutar código del lado del servidor.
-NaN: Un valor especial en JavaScript que indica que un resultado matemático no es un número válido.
-Nanotechnology: Nanotecnología, la manipulación de materiales a nivel de átomos y moléculas para crear nuevas estructuras y dispositivos.
-Native App: Aplicación nativa, un software diseñado específicamente para funcionar en un sistema operativo o plataforma particular.
-Operating System: Sistema operativo, software que gestiona los recursos y proporciona servicios para aplicaciones y usuarios en una computadora.
-Open Source: Código abierto, un tipo de software cuyo código fuente está disponible públicamente y puede ser modificado y distribuido libremente.
-OCR: Reconocimiento óptico de caracteres, tecnología que convierte imágenes de texto en texto editable.
-OpenGL: Biblioteca de gráficos de código abierto utilizada para renderizar gráficos 2D y 3D en aplicaciones.
-OSI Model: Modelo de interconexión de sistemas abiertos, un marco de referencia para el diseño de redes de computadoras.
-Python: Un lenguaje de programación de alto nivel conocido por su simplicidad y facilidad de uso.
-PHP: Un lenguaje de script del lado del servidor ampliamente utilizado para desarrollar aplicaciones web dinámicas.
-Pixel: El elemento más pequeño de una imagen digital, una unidad de información visual.
-Protocol: Protocolo, un conjunto de reglas y estándares que rigen la comunicación entre dispositivos en una red.
-Power Supply: Fuente de alimentación, un dispositivo que proporciona energía eléctrica a una computadora u otro dispositivo.
-QR Code: Un tipo de código de barras bidimensional que almacena información y se puede escanear con un dispositivo móvil.
-Query: Consulta, una solicitud para buscar y recuperar información de una base de datos o motor de búsqueda.
-Quick Charge: Tecnología de carga rápida que permite cargar dispositivos móviles más rápido que con un cargador estándar.
-Quantum Computing: Computación cuántica, un enfoque de la computación que utiliza principios cuánticos para realizar cálculos.
-Quad-core: Procesador con cuatro núcleos, lo que permite realizar múltiples tareas simultáneamente.
-RAM: Memoria de acceso aleatorio, una memoria temporal utilizada por una computadora para almacenar datos y programas en ejecución.
-ROM: Memoria de solo lectura, una memoria permanente utilizada para almacenar datos que no cambian.
-Router: Enrutador, un dispositivo que dirige el tráfico de red entre diferentes dispositivos y redes.
-Responsive Design: Diseño responsivo, un enfoque de diseño web que permite que un sitio web se adapte automáticamente a diferentes tamaños de pantalla.
-Runtime: Tiempo de ejecución, el período durante el cual un programa o proceso se está ejecutando.
-SQL: Lenguaje de consulta estructurado, utilizado para administrar y consultar bases de datos.
-SSL/TLS: Protocolos de seguridad que cifran la comunicación entre clientes y servidores web.
-Software: Programas y aplicaciones que se ejecutan en una computadora o dispositivo.
-Server: Servidor, un equipo o programa que proporciona servicios y recursos a otros dispositivos en una red.
-SaaS: Software como servicio, una forma de distribución de software a través de Internet.
-TCP/IP: Conjunto de protocolos utilizados para la comunicación en Internet.
-Terabyte: Una unidad de medida de almacenamiento que equivale a aproximadamente un billón de bytes.
-Touchscreen: Pantalla táctil, una interfaz que permite a los usuarios interactuar con un dispositivo mediante toques y gestos.
-Trojan Horse: Caballo de Troya, un tipo de malware que se disfraza de software legítimo pero contiene código malicioso.
-TypeScript: Un lenguaje de programación que amplía JavaScript con características de tipado estático.
-USB: Universal Serial Bus, un estándar para la conexión de dispositivos a una computadora, utilizado para transferir datos y suministrar energía.
-URL: Localizador de recursos uniforme, una dirección web que identifica la ubicación de un recurso en Internet.
-User Interface: Interfaz de usuario, el diseño visual y la interacción de un software o dispositivo.
-Ubuntu: Un sistema operativo basado en Linux, conocido por su facilidad de uso y enfoque en la comunidad de código abierto.
-Virtual Reality: Realidad virtual, tecnología que crea una experiencia inmersiva y simulada mediante un entorno virtual.
-VPN: Red privada virtual, una red segura que permite a los usuarios acceder a recursos en una red privada a través de Internet.
-Vector Graphics: Gráficos vectoriales, imágenes basadas en objetos geométricos como líneas y formas, que pueden escalarse sin pérdida de calidad.
-VoIP: Protocolo de voz sobre Internet, que permite realizar llamadas de voz a través de Internet.
-Virtual Machine: Máquina virtual, un entorno de software que emula una computadora completa dentro de otra computadora.
-Wi-Fi: Tecnología de red inalámbrica que permite la conexión a Internet y a otras redes sin cables.
-Web Browser: Navegador web, una aplicación que permite a los usuarios acceder y navegar por sitios web en Internet.
-Web Hosting: Alojamiento web, el servicio que permite a los sitios web estar disponibles en Internet.
-Web Development: Desarrollo web, el proceso de crear y mantener sitios web y aplicaciones web.
-WYSIWYG: Lo que ves es lo que obtienes, un editor que muestra el contenido finalizado mientras se está editando.
-XML: Lenguaje de marcado utilizado para crear páginas web y definir su estructura y contenido.
-XSS: Una vulnerabilidad de seguridad que permite a los atacantes insertar scripts maliciosos en sitios web visitados por otros usuarios.
-Xcode: Un entorno de desarrollo integrado utilizado para crear aplicaciones para iOS y macOS.
-XGBoost: Una biblioteca de aprendizaje automático utilizada para tareas de clasificación y regresión.
-XHTML: Un lenguaje de marcado similar a HTML pero más estricto y basado en XML.
-YouTube: Una plataforma en línea que permite a los usuarios compartir y ver videos.
-Yocto Project: Un marco de trabajo para crear sistemas embebidos de Linux personalizados.
-ZIP: Un formato de archivo comprimido que reduce el tamaño de los archivos para facilitar su transferencia y almacenamiento.
-Zettabyte: Una unidad de medida de almacenamiento que equivale a aproximadamente un trillón de bytes.
-Zoom: Una plataforma de videoconferencia que permite a las personas reunirse virtualmente para comunicarse y colaborar en línea.
+Ai : Inteligencia artificial, la capacidad de las máquinas para aprender, razonar y realizar tareas que normalmente requieren inteligencia humana.
+Api : Interfaz de programación de aplicaciones, un conjunto de reglas y protocolos que permiten a las aplicaciones comunicarse entre sí o con un sistema operativo.
+Arm : Arquitectura de microprocesadores utilizada comúnmente en dispositivos móviles y sistemas embebidos.
+Aws : Servicios web de Amazon, una plataforma que ofrece almacenamiento, computación y otros servicios en la nube.
+Azure : Plataforma de servicios en la nube proporcionada por Microsoft que ofrece servicios de infraestructura, desarrollo y análisis de datos.
+Bit : La unidad más pequeña de información en la computación, que puede ser 0 o 1 en un sistema binario.
+Blockchain : Tecnología de registro distribuido que permite crear registros seguros y transparentes de transacciones o activos.
+Boot : Proceso de iniciar una computadora y cargar el sistema operativo en la memoria.
+Browser : Navegador web, una aplicación que permite a los usuarios acceder y navegar por sitios web en Internet.
+Cpu : Unidad central de procesamiento, el cerebro de una computadora que realiza cálculos y ejecuta instrucciones.
+Cryptography : Criptografía, técnica de cifrado y descifrado de datos para garantizar su seguridad y confidencialidad.
+Css : Lenguaje de hojas de estilo utilizado para controlar la apariencia y el diseño de páginas web.
+Cybersecurity : Seguridad cibernética, medidas y prácticas para proteger sistemas y datos de amenazas y ataques cibernéticos.
+Database : Base de datos, una colección organizada de datos almacenados y accesibles electrónicamente.
+Dns : Sistema de nombres de dominio, que traduce los nombres de dominio en direcciones IP.
+Docker : Plataforma de contenedores que permite empaquetar, distribuir y ejecutar aplicaciones en entornos aislados.
+Encryption : Encriptación, proceso de codificación de datos para protegerlos de accesos no autorizados.
+Ethernet : Tecnología de red que permite la comunicación de datos a través de cables de cobre o fibra óptica.
+Firewall : Cortafuegos, un sistema de seguridad que controla el tráfico de red y protege una red de accesos no autorizados.
+Firmware : Software almacenado en un chip de hardware, utilizado para controlar la funcionalidad de dispositivos y componentes.
+Framework : Marco de trabajo, una estructura o plataforma que proporciona herramientas y bibliotecas para desarrollar aplicaciones más fácilmente.
+Ftp : Protocolo de transferencia de archivos, utilizado para enviar y recibir archivos a través de Internet.
+Funcion : Función, un bloque de código que realiza una tarea específica y puede ser llamado desde otras partes del programa.
+Gigabyte : Una unidad de medida de almacenamiento que equivale a aproximadamente mil millones de bytes.
+Google : Una de las principales compañías tecnológicas del mundo, conocida por su motor de búsqueda y servicios en línea.
+Gps : Sistema de posicionamiento global, que utiliza satélites para determinar la ubicación geográfica precisa.
+Gpu : Unidad de procesamiento de gráficos, que acelera el procesamiento de imágenes y gráficos en computadoras.
+Gui : Interfaz gráfica de usuario, una forma visual de interactuar con un programa o sistema operativo.
+Hacker : Una persona experta en seguridad informática que utiliza sus habilidades para encontrar vulnerabilidades en sistemas y redes.
+Hdmi : Interfaz multimedia de alta definición, que permite la transmisión de audio y video en alta calidad.
+Html : Lenguaje de marcado utilizado para crear páginas web y definir su estructura y contenido.
+Http : Protocolo de transferencia de hipertexto, utilizado para la comunicación entre clientes y servidores web.
+Ide : Entorno de desarrollo integrado, una aplicación que facilita la escritura, compilación y depuración de código.
+Intel : Una de las principales compañías de tecnología del mundo, conocida por sus procesadores y componentes para computadoras.
+Interface : Interfaz, un medio o punto de comunicación entre dos sistemas o dispositivos.
+Iot : Internet de las cosas, la interconexión de dispositivos inteligentes a través de Internet para recopilar y compartir datos.
+Java : Un lenguaje de programación popular utilizado en el desarrollo de aplicaciones de software.
+Javascript : Un lenguaje de programación ampliamente utilizado para agregar interactividad y dinamismo a sitios web.
+Joomla : Un sistema de gestión de contenido (CMS) utilizado para crear y administrar sitios web.
+Jpeg : Un formato de compresión de imágenes ampliamente utilizado para fotografías digitales.
+Json : Un formato de intercambio de datos ligero y fácil de leer, basado en la sintaxis de JavaScript.
+Kernel : Núcleo, el componente central del sistema operativo que gestiona los recursos y facilita la comunicación entre el hardware y el software.
+Keyboard : Teclado, dispositivo de entrada que permite al usuario introducir texto y comandos en una computadora.
+Keyword : Palabra clave, una palabra o frase utilizada para buscar información en un motor de búsqueda.
+Kilobyte : Una unidad de medida de almacenamiento que equivale a aproximadamente mil bytes.
+Kubernetes : Una plataforma de código abierto para automatizar el despliegue, el escalado y la gestión de aplicaciones en contenedores.
+Lan : Red de área local, una red que conecta dispositivos en un área geográfica limitada, como una oficina o un hogar.
+Latency : Latencia, el tiempo que tarda un paquete de datos en viajar desde la fuente hasta el destino en una red.
+Lcd : Pantalla de cristal líquido, una tecnología de visualización utilizada en televisores, monitores y dispositivos móviles.
+Linux : Un sistema operativo de código abierto basado en Unix, ampliamente utilizado en servidores y dispositivos embebidos.
+Login : Inicio de sesión, el proceso de autenticación para acceder a una cuenta o sistema.
+Malware : Software malicioso, programas diseñados para dañar, acceder o robar información de un sistema sin autorización.
+Megabyte : Una unidad de medida de almacenamiento que equivale a aproximadamente un millón de bytes.
+Microprocessor : Microprocesador, el procesador central de una computadora en un solo chip.
+Motherboard : Placa base, la placa principal en una computadora que conecta y comunica todos los componentes del sistema.
+Nan : Un valor especial en JavaScript que indica que un resultado matemático no es un número válido.
+Nanotechnology : Nanotecnología, la manipulación de materiales a nivel de átomos y moléculas para crear nuevas estructuras y dispositivos.
+Network : Red, una colección de dispositivos y sistemas interconectados que comparten recursos y datos.
+Ocr : Reconocimiento óptico de caracteres, tecnología que convierte imágenes de texto en texto editable.
+Opengl : Biblioteca de gráficos de código abierto utilizada para renderizar gráficos 2D y 3D en aplicaciones.
+Php : Un lenguaje de script del lado del servidor ampliamente utilizado para desarrollar aplicaciones web dinámicas.
+Pixel : El elemento más pequeño de una imagen digital, una unidad de información visual.
+Protocol : Protocolo, un conjunto de reglas y estándares que rigen la comunicación entre dispositivos en una red.
+Python : Un lenguaje de programación de alto nivel conocido por su simplicidad y facilidad de uso.
+Query : Consulta, una solicitud para buscar y recuperar información de una base de datos o motor de búsqueda.
+Ram : Memoria de acceso aleatorio, una memoria temporal utilizada por una computadora para almacenar datos y programas en ejecución.
+Rom : Memoria de solo lectura, una memoria permanente utilizada para almacenar datos que no cambian.
+Router : Enrutador, un dispositivo que dirige el tráfico de red entre diferentes dispositivos y redes.
+Runtime : Tiempo de ejecución, el período durante el cual un programa o proceso se está ejecutando.
+Server : Servidor, un equipo o programa que proporciona servicios y recursos a otros dispositivos en una red.
+Software : Programas y aplicaciones que se ejecutan en una computadora o dispositivo.
+Sql : Lenguaje de consulta estructurado, utilizado para administrar y consultar bases de datos.
+Terabyte : Una unidad de medida de almacenamiento que equivale a aproximadamente un billón de bytes.
+Touchscreen : Pantalla táctil, una interfaz que permite a los usuarios interactuar con un dispositivo mediante toques y gestos.
+Typescript : Un lenguaje de programación que amplía JavaScript con características de tipado estático.
+Ubuntu : Un sistema operativo basado en Linux, conocido por su facilidad de uso y enfoque en la comunidad de código abierto.
+Url : Localizador de recursos uniforme, una dirección web que identifica la ubicación de un recurso en Internet.
+Usb : Universal Serial Bus, un estándar para la conexión de dispositivos a una computadora, utilizado para transferir datos y suministrar energía.
+Vpn : Red privada virtual, una red segura que permite a los usuarios acceder a recursos en una red privada a través de Internet.
+Wifi : Tecnología de red inalámbrica que permite la conexión a Internet y a otras redes sin cables.
+Xcode : Un entorno de desarrollo integrado utilizado para crear aplicaciones para iOS y macOS.
+Xgboost : Una biblioteca de aprendizaje automático utilizada para tareas de clasificación y regresión.
+Xhtml : Un lenguaje de marcado similar a HTML pero más estricto y basado en XML.
+Xml : Lenguaje de marcado utilizado para crear páginas web y definir su estructura y contenido.
+Xss : Una vulnerabilidad de seguridad que permite a los atacantes insertar scripts maliciosos en sitios web visitados por otros usuarios.
+YouTube : Una plataforma en línea que permite a los usuarios compartir y ver videos.
+Zettabyte : Una unidad de medida de almacenamiento que equivale a aproximadamente un trillón de bytes.
+Zip : Un formato de archivo comprimido que reduce el tamaño de los archivos para facilitar su transferencia y almacenamiento.
+Zoom : Una plataforma de videoconferencia que permite a las personas reunirse virtualmente para comunicarse y colaborar en línea.

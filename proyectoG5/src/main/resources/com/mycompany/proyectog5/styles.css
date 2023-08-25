@@ -75,6 +75,32 @@
     -fx-padding: 5px 10px;
 }
 
+.texto-general {
+    -fx-text-fill: #17264f; /* Color del texto */
+    -fx-font-family: "Nunito"; /* Fuente del texto */
+    -fx-font-size: 16px; /* Tamaño de fuente */
+    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-padding: 5px 10px; /* Espaciado interno */
+}
+.acertada {
+    -fx-text-fill: #008000; /* Verde */
+    fx-font-family: "Nunito"; /* Fuente del texto */
+    -fx-font-size: 16px; /* Tamaño de fuente */
+    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-padding: 5px 10px; /* Espaciado interno */
+}
+
+.errada {
+    -fx-text-fill: #FF0000; /* Rojo */
+    -fx-font-family: "Nunito"; /* Fuente del texto */
+    -fx-font-size: 16px; /* Tamaño de fuente */
+    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-padding: 5px 10px; /* Espaciado interno */
+}
+
+
+
+
 
 
 

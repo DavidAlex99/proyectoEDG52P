@@ -4,6 +4,7 @@ Almohada : Objeto suave y acolchado que se coloca en la cama para apoyar la cabe
 Ambulancia : Tipo de vehículo acondicionado con instrumental de primeros auxilios cuya función es la de transportar personas heridas o enfermas. Posee una sirena para avisar su paso en las calles o rutas cuando debe pasar en forma urgente.
 Arcoiris : Banda de 7 colores que se forma en el cielo luego de la lluvia debido a la reflexión de la luz del sol en las gotas de lluvia.
 Arpa : Es un instrumento musical de cuerdas.
+Atomo : Unidad básica de la materia que mantiene sus propiedades de elemento químico.
 Autopista : Ruta con dos carriles que permite la circulación en dos sentidos y en la que hay una separación entre ambas direcciones.
 Aventura : Experiencia emocionante o arriesgada que implica la exploración de lo desconocido o la búsqueda de nuevas experiencias.
 Azafata : Mujer cuya función es la de servir a los pasajeros de un avión.
@@ -15,19 +16,25 @@ Borrador : Instrumento para borrar trazos de lápiz o tinta.
 Bosque : Extensión de terreno poblado de árboles y matas.
 Bosquejo : Dibujo o croquis sin detalles.
 Buceo : Acción de sumergirse bajo el agua con escafandra o aletas.
-Buzon : Receptáculo destinado a recibir el correo.
 Busqueda : Acción de buscar algo.
+Buzon : Receptáculo destinado a recibir el correo.
 Cafeteria : Establecimiento donde se sirven bebidas como café y té, y a menudo también comidas ligeras.
 Calendario : Tabla que muestra los días, semanas y meses de un año, organizados en un orden determinado.
 Camisa : Prenda de vestir que cubre el torso y los brazos, generalmente con botones en la parte delantera.
 Cancion : Composición musical con letra que se canta.
+Capazo : Cesta grande, a menudo tejida, utilizada para transportar objetos o como accesorio
+Carne : Tejido muscular de los animales, que se consume como alimento humano
 Casa : Edificio destinado para ser habitado por personas.
-Caza: Actividad de perseguir y capturar animales, ya sea con fines alimenticios, deportivos o recreativos.
+Caza : Actividad de perseguir y capturar animales, ya sea con fines alimenticios, deportivos o recreativos.
 Cielo : Espacio que se extiende sobre la Tierra, donde se ven las estrellas, el sol y la luna.
 Computadora : Máquina electrónica para procesar y almacenar información.
+Corredor : Un espacio largo y estrecho en un edificio que conecta diferentes habitaciones o áreas.
 Cuchara : Utensilio de cocina con mango y una parte cóncava que se usa para tomar y servir alimentos líquidos o semilíquidos.
 Cuchillo : Instrumento de corte con hoja de acero afilada y mango.
+Cuenco : Recipiente redondeado y poco profundo utilizado para contener alimentos líquidos o sólidos
+Cuenta : Registro financiero que muestra el saldo de una persona, empresa o entidad
 Cuento : Relato breve de ficción.
+Decente : Algo que es adecuado, respetable y en línea con las normas sociales o morales
 Desechar : Eliminar o rechazar algo considerado innecesario o inútil.
 Destacar : Sobresalir o resaltar por alguna cualidad o característica.
 Determinacion : Firmeza y decisión para lograr un objetivo.
@@ -44,8 +51,8 @@ Elocuencia : Facilidad y belleza en el lenguaje al expresarse.
 Elocuente : Que se expresa con fluidez y persuasión.
 Enigmatico : Que resulta misterioso o difícil de entender.
 Erradicar : Eliminar o extirpar por completo algo no deseado.
-Esculpir : Tallar o dar forma a una pieza de arte o escultura.
 Esceptico : Que muestra duda o incredulidad hacia algo.
+Esculpir : Tallar o dar forma a una pieza de arte o escultura.
 Estruendo : Ruido fuerte y ensordecedor.
 Euforico : Que experimenta una gran alegría o excitación.
 Fascinacion : Atracción intensa y cautivadora hacia algo o alguien.
@@ -66,8 +73,9 @@ Gloria : Estado de bienestar y felicidad supremos.
 Glorificar : Enaltecer o alabar con gran reconocimiento.
 Glorioso : Magnífico o lleno de gloria y esplendor.
 Gozo : Sensación de felicidad y satisfacción intensa.
-Gratitud : Sentimiento de agradecimiento y reconocimiento.
 Gracil : De movimientos elegantes y ligeros.
+Gratitud : Sentimiento de agradecimiento y reconocimiento.
+Habil : Que tiene habilidad y destreza para hacer algo.
 Hermetico : Que está cerrado de manera que no permite la entrada ni salida de aire o líquido.
 Hervir : Entrar en ebullición o agitación por efecto del calor.
 Heterogeneo : Que está compuesto por elementos diferentes.
@@ -77,27 +85,30 @@ Hogar : Lugar donde se vive y se siente cómodo y seguro.
 Honradez : Virtud de actuar con rectitud e integridad.
 Humildad : Cualidad de ser modesto y reconocer las propias limitaciones.
 Huraño : Que evita o rehúye el trato con otras personas.
-Habil : Que tiene habilidad y destreza para hacer algo.
 Idilico : Que evoca una situación ideal y romántica.
 Impertinente : Que es inoportuno o fuera de lugar.
 Imperturbable : Que no se deja afectar por situaciones externas o emociones.
+Impetu : Fuerza o vigor con que se realiza una acción.
 Inagotable : Que no se agota o se termina, que es inagotable.
 Indulgente : Tolerante y comprensivo con los errores o debilidades de otros.
 Inmaculado : Que está libre de manchas o imperfecciones.
 Insignificante : Sin importancia o relevancia.
 Insolito : Raro o poco común, fuera de lo ordinario.
+Intimo : Cercano o afectuoso en las relaciones personales.
 Jactancia : Presunción excesiva o vanidad al hablar de uno mismo.
 Jazmin : Planta ornamental conocida por sus flores blancas y fragantes.
 Jirafa : Mamífero herbívoro con cuello largo, propio de las llanuras africanas.
 Jovial : Alegre y animado, con una actitud positiva y entusiasta hacia la vida.
 Jubilacion : Retiro laboral después de una larga carrera, que permite disfrutar del tiempo libre y descansar.
+Jubilo : Alegría intensa y desbordante que se expresa en celebraciones y festejos.
 Juez : Funcionario encargado de administrar justicia y resolver conflictos legales.
+Jugo : Actividad recreativa con reglas y competición para el entretenimiento o desafío.
 Juicioso : Persona prudente y sensata, que toma decisiones reflexivas y bien pensadas.
 Justicia : Principio moral y ético que busca la equidad en el trato y la protección de los derechos de todos.
 Juventud : Etapa temprana de la vida caracterizada por la vitalidad y la exploración.
-Jubilo : Alegría intensa y desbordante que se expresa en celebraciones y festejos.
 Kaki : Fruto del árbol caqui, de sabor dulce y textura suave.
 Karate : Arte marcial de origen japonés que combina movimientos de ataque y defensa.
+Karateka : Practicante o experto en karate.
 Karma : En algunas creencias, la ley de causa y efecto, donde las acciones tienen consecuencias.
 Karting : Deporte de competición que se practica con pequeños vehículos de cuatro ruedas y motor, en circuitos cerrados.
 Kermes : Feria o fiesta popular, generalmente con fines benéficos, donde se venden productos y se realizan actividades lúdicas.
@@ -105,42 +116,42 @@ Kilojulio : Unidad de energía equivalente a 1000 julios.
 Kilometro : Medida de longitud equivalente a 1000 metros, comúnmente utilizada para medir distancias largas en carreteras y mapas.
 Kiosco : Pequeña construcción o caseta ubicada en lugares públicos, donde se venden periódicos, revistas, golosinas u otros productos.
 Kiwi : Fruta de forma ovalada, de piel marrón y pulpa verde, con un sabor dulce y refrescante.
-Karateka : Practicante o experto en karate.
 Latente : Que está oculto o no se manifiesta de manera evidente.
 Lealtad : Fidelidad y compromiso hacia una persona, causa o principio.
 Lecho : Superficie donde se duerme o descansa.
 Legado : Herencia o bienes que se transmiten de una generación a otra.
 Libertad : Estado de autonomía y ausencia de opresión, que permite a las personas actuar y pensar según su voluntad.
-Ludopata : Persona que tiene una adicción al juego y no puede controlar su impulso de apostar.
-Luminoso : Que emite luz o brilla con intensidad.
 Limpido : Claro y transparente, sin impurezas ni turbidez.
 Lobulo : Parte redondeada de un órgano, como el lóbulo de la oreja.
 Ludico : Relacionado con el juego y la diversión.
+Ludopata : Persona que tiene una adicción al juego y no puede controlar su impulso de apostar.
+Luminoso : Que emite luz o brilla con intensidad.
 Magnetismo : Propiedad de ciertos materiales para atraer objetos metálicos o ejercer fuerzas a distancia.
 Magnifico : Espléndido y grandioso, destacando por su belleza y perfección.
 Manantial : Fuente natural de agua que brota de la tierra.
 Mandarina : Fruta cítrica de piel fina y color naranja intenso, similar a la naranja pero más pequeña.
 Maravilla : Algo extraordinario y asombroso que provoca admiración y asombro.
+Maximo : El más grande o de mayor intensidad en un conjunto.
 Melancolia : Sentimiento de tristeza y nostalgia.
 Melodia : Secuencia de sonidos musicales que forman una línea melódica agradable y armoniosa.
 Memorizar : Aprender algo de memoria para recordarlo y repetirlo posteriormente.
 Misterio : Cosa o situación que no puede explicarse con facilidad y despierta curiosidad.
-Maximo : El más grande o de mayor intensidad en un conjunto.
 Naturaleza : Conjunto de fenómenos y seres vivos que existen en el mundo sin intervención humana.
 Necesitar : Requerir algo para satisfacer una necesidad o deseo.
+Nectar : Líquido dulce y nutritivo que producen algunas flores y que es consumido por abejas y otros insectos.
 Nervio : Conjunto de fibras que transmiten impulsos eléctricos entre el cerebro y otras partes del cuerpo.
 Nobleza : Cualidad de ser noble, generoso y digno.
 Nocturno : Relativo a la noche o que sucede durante la noche.
+Nomada : Persona o comunidad que no tiene una residencia fija y se desplaza de un lugar a otro en busca de recursos.
 Nostalgia : Sentimiento de añoranza y tristeza por momentos o lugares del pasado.
 Nutrir : Alimentar y proporcionar los nutrientes necesarios para el crecimiento y desarrollo de un organismo.
-Nectar : Líquido dulce y nutritivo que producen algunas flores y que es consumido por abejas y otros insectos.
-Nomada : Persona o comunidad que no tiene una residencia fija y se desplaza de un lugar a otro en busca de recursos.
 Oasis : Área fértil en un desierto, con vegetación y agua.
 Obedecer : Acatar órdenes o cumplir con lo establecido por alguien.
 Obsoleto : Que está pasado de moda o fuera de uso.
 Ocasion : Momento o situación propicia para hacer algo.
 Oculto : Que está escondido o no visible.
 Ofrecer : Dar o presentar algo a alguien.
+Orbita : Trayectoria curva que sigue un cuerpo celeste alrededor de otro debido a la fuerza de gravedad.
 Orgullo : Sentimiento de satisfacción y autoestima por logros propios o de otros.
 Orquesta : Conjunto de músicos que interpretan piezas musicales con instrumentos variados.
 Oscuro : Falto de luz o difícil de ver con claridad.
@@ -157,21 +168,23 @@ Quedar : Permanecer o estar en cierto lugar o situación.
 Querido : Persona o cosa a la que se tiene afecto o estima.
 Quiebra : Estado de insolvencia económica de una empresa o persona.
 Quimera : Ilusión o fantasía irrealizable.
+Quimica : Ciencia que estudia la composición de las sustancias y sus transformaciones.
 Quinientos : Número que sigue al cuatrocientos noventa y nueve.
 Quiste : Bolsa o cavidad cerrada en el cuerpo, generalmente llena de líquido.
 Quitar : Remover o apartar algo de un lugar.
-Quimica : Ciencia que estudia la composición de las sustancias y sus transformaciones.
 Quorum : Número mínimo de personas requerido para tomar decisiones válidas en una asamblea o reunión.
+Rabia : Emoción fuerte de enojo e irritación en respuesta a situaciones injustas o frustrantes.
 Realizar : Llevar a cabo o cumplir una acción o tarea.
 Rechazar : No aceptar o rehusar algo.
 Recuerdo : Memoria o imagen del pasado.
+Reir : Manifestar alegría mediante la emisión de sonidos característicos.
+Reirse : Manifestar risa o expresar alegría ante algo gracioso.
 Reloj : Instrumento para medir el tiempo.
 Rescatar : Salvar o liberar a alguien de una situación difícil.
 Resolver : Hallar la solución o respuesta a un problema.
-Reir : Manifestar alegría mediante la emisión de sonidos característicos.
-Reirse : Manifestar risa o expresar alegría ante algo gracioso.
 Rico : Que tiene abundancia de bienes o riquezas.
 Riesgo : Probabilidad de que ocurra un daño o peligro.
+Rogar : Pedir o suplicar con insistencia
 Sacrificar : Renunciar a algo valioso en beneficio de un objetivo o causa.
 Sencillo : Que es simple o fácil de entender.
 Sensato : Persona prudente y razonable en sus decisiones y acciones.
@@ -184,19 +197,21 @@ Sorpresa : Emoción producida por algo inesperado o asombroso.
 Sutil : Que es delicado o apenas perceptible.
 Talento : Habilidad o aptitud especial para realizar algo con éxito.
 Tarde : Parte del día que transcurre desde el mediodía hasta el anochecer.
+Techo : Parte superior de la estructura que proporciona protección contra el clima y el exterior.
 Tender : Extender o colocar algo en un lugar determinado.
 Tendero : Persona que tiene una tienda o establecimiento de venta al público.
 Tener : Poseer o disponer de algo.
 Tiempo : Período continuo en el que ocurren los sucesos y se suceden los estados de las cosas.
+Titulo : Nombre o designación que indica un rango, posición o reconocimiento.
 Tranquilo : Que está en calma o sin agitación.
 Transformar : Cambiar la forma o naturaleza de algo.
 Transmitir : Comunicar o transferir información, sentimientos o conocimientos a otros.
-Titulo : Nombre o designación que indica un rango, posición o reconocimiento.
 Ubicar : Situar o localizar algo o alguien en un lugar específico.
 Ultimar : Finalizar o llevar a cabo la última parte de una tarea o proyecto.
+Unanime : Que es compartido o acordado por todos sin discrepancias.
+Unico : Que es el único de su tipo o que no tiene igual.
 Unir : Juntar o conectar cosas o personas para formar un conjunto.
 Universo : Conjunto de todo lo existente, incluyendo la materia, el espacio y el tiempo.
-Unanime : Que es compartido o acordado por todos sin discrepancias.
 Urbe : Término poético o literario que se refiere a la ciudad o metrópolis.
 Urdir : Tramar o idear algo, especialmente algo oculto o malicioso.
 Usar : Emplear o hacer uso de algo para un propósito determinado.
@@ -208,9 +223,9 @@ Veraz : Que dice o expresa la verdad.
 Versatil : Que tiene la capacidad de adaptarse o desempeñarse en diferentes situaciones.
 Vibrante : Que vibra o produce vibraciones.
 Virtud : Cualidad o capacidad de hacer el bien y actuar con rectitud y moralidad.
+Vivido : Que tiene colores intensos y brillantes, o que es muy animado y realista.
 Volver : Regresar o retornar a un lugar o estado previo.
 Voraz : Que come con ansias y mucha cantidad.
-Vivido : Que tiene colores intensos y brillantes, o que es muy animado y realista.
 Washington : Capital de Estados Unidos y una de las ciudades más importantes del país.
 Waterpolo : Deporte acuático de equipo que se juega en una piscina y combina elementos del fútbol y el balonmano.
 Watt : Unidad de potencia en el Sistema Internacional de Unidades.
@@ -224,13 +239,13 @@ Wombat : Mamífero marsupial herbívoro originario de Australia.
 Xenartros : Orden de mamíferos placentarios que incluye los perezosos y osos hormigueros.
 Xenodocia : Recepción de extranjeros en una ciudad o lugar determinado.
 Xenofobia : Aversión o miedo irracional hacia personas o culturas extranjeras.
-Xenogamia : Tipo de reproducción en la que se cruzan individuos de distintas poblaciones o especies.
 Xenofobo : Persona que siente rechazo o animadversión hacia extranjeros o culturas diferentes.
+Xenogamia : Tipo de reproducción en la que se cruzan individuos de distintas poblaciones o especies.
 Xenogono : Polígono con lados de diferentes longitudes.
 Xenon : Elemento químico gaseoso, de número atómico 54 y símbolo Xe.
 Xeroftalmia : Enfermedad ocular caracterizada por la sequedad extrema de los ojos debido a deficiencias de vitamina A.
-Xilografia : Técnica de impresión que utiliza planchas de madera grabadas para transferir imágenes a papel u otros materiales.
 Xilofono : Instrumento musical de percusión formado por láminas de madera que producen diferentes notas al ser golpeadas.
+Xilografia : Técnica de impresión que utiliza planchas de madera grabadas para transferir imágenes a papel u otros materiales.
 Yacimiento : Lugar donde se encuentran y acumulan depósitos naturales de minerales, fósiles o materiales arqueológicos.
 Yate : Embarcación de recreo, generalmente lujosa y de tamaño medio a grande.
 Yodo : Elemento químico esencial para el funcionamiento de la glándula tiroides.
@@ -249,8 +264,3 @@ Zarza : Arbusto espinoso que produce frutos conocidos como zarzamoras o moras.
 Zoo : Abreviatura de zoológico, lugar donde se exhiben animales de diversas especies.
 Zumbido : Sonido continuo y agudo similar al de un insecto en movimiento.
 Zurdo : Persona que utiliza preferentemente la mano izquierda para escribir o realizar actividades manuales.
-Atomo : Unidad básica de la materia que mantiene sus propiedades de elemento químico.
-Impetu : Fuerza o vigor con que se realiza una acción.
-Intimo : Cercano o afectuoso en las relaciones personales.
-Orbita : Trayectoria curva que sigue un cuerpo celeste alrededor de otro debido a la fuerza de gravedad.
-Unico : Que es el único de su tipo o que no tiene igual.
