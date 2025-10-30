@@ -47,6 +47,9 @@ public class BuscarController implements Initializable {
     private static final String SEARCH_TYPE_SUFFIX = "Terminación";
     private static final String SEARCH_TYPE_APPROXIMATE = "Aproximado";
 
+    // Random instance for random word selection
+    private static final Random RANDOM = new Random();
+
     private Trie diccionario;
 
     @FXML
@@ -416,8 +419,7 @@ public class BuscarController implements Initializable {
 
     @FXML
     public void searchRandom(ActionEvent event) {
-        Random random = new Random();
-        String palabraRandom = diccionario.getPalabras().get(random.nextInt(diccionario.getPalabras().size()));
+        String palabraRandom = diccionario.getPalabras().get(RANDOM.nextInt(diccionario.getPalabras().size()));
         busquedaTF.setText(palabraRandom);
         searchWord(event);
     }
