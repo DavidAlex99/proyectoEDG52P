@@ -1,6 +1,8 @@
 package estructuras;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -14,78 +16,80 @@ import java.util.TreeSet;
  */
 public class Trie {
     private TrieNode root;
-      
-    //Constructor
-    public Trie(){
-        this.root = new TrieNode('\0'); //caracter nulo
+
+    // Constructor
+    public Trie() {
+        this.root = new TrieNode('\0'); // caracter nulo
     }
-    
-    //Inserta caracter por caracter al trie
-    public boolean insert(String word, String significado){
-        if(word== null || significado == null){
+
+    // Inserta caracter por caracter al trie
+    public boolean insert(String word, String significado) {
+        if (word == null || significado == null) {
             return false;
         }
         TrieNode nodoActual = this.root;
-        //se recorre cada caracter de la palabra a insertar
-        for(char caracter : word.toCharArray()){
+        // se recorre cada caracter de la palabra a insertar
+        for (char caracter : word.toCharArray()) {
             // Se verifica si ya existe un nodo hijo para el carácter actual
             TrieNode child = nodoActual.getChild(caracter);
-            if(child == null){
-                nodoActual.addChild(caracter); //si no existe se agrega un nodo hijo a ese caracter
+            if (child == null) {
+                nodoActual.addChild(caracter); // si no existe se agrega un nodo hijo a ese caracter
             }
-            nodoActual = nodoActual.getChild(caracter);//se actualiza al nodo siguiente
+            nodoActual = nodoActual.getChild(caracter);// se actualiza al nodo siguiente
         }
-        nodoActual.setIsEnd(true); //como ya es una palabra, es true
-        nodoActual.setSignificado(significado);//Cada palabra tiene su significado
+        nodoActual.setIsEnd(true); // como ya es una palabra, es true
+        nodoActual.setSignificado(significado);// Cada palabra tiene su significado
         return true;
     }
-    
-    
-    public boolean search(String word){
+
+    public boolean search(String word) {
         TrieNode nodoActual = this.root;
-        //se recorre cada caracter de esa palabra
-        for(char caracter: word.toCharArray()){
-            //se verifica si ya existe un nodo hijo para ese caracter
+        // se recorre cada caracter de esa palabra
+        for (char caracter : word.toCharArray()) {
+            // se verifica si ya existe un nodo hijo para ese caracter
             nodoActual = nodoActual.getChild(caracter);
-            if(nodoActual == null){
-                return false; //significa que word no esta en el Trie
+            if (nodoActual == null) {
+                return false; // significa que word no esta en el Trie
             }
         }
-        //al terminar de recorrer la palabrar(estar al final) se retorna si es una palabra o no
+        // al terminar de recorrer la palabrar(estar al final) se retorna si es una
+        // palabra o no
         return nodoActual.isIsEnd();
     }
-    
-    public boolean remove(String word){
+
+    public boolean remove(String word) {
         TrieNode nodoActual = this.root;
-        Stack<TrieNode> stack = new Stack<>(); //se almacenan los nodos
-        for(char caracter: word.toCharArray()){
-            //se almacena el nodo hijo del primer caracter de la palabra
+        Deque<TrieNode> stack = new ArrayDeque<>(); // se almacenan los nodos
+        for (char caracter : word.toCharArray()) {
+            // se almacena el nodo hijo del primer caracter de la palabra
             nodoActual = nodoActual.getChild(caracter);
-            if(nodoActual == null){
+            if (nodoActual == null) {
                 return false;
             }
             stack.push(nodoActual);
         }
-        //si el nodoFinal no representa el final de la palabra...
-        if(!nodoActual.isIsEnd()){
-            return false; //significa que word no está en el Trie
+        // si el nodoFinal no representa el final de la palabra...
+        if (!nodoActual.isIsEnd()) {
+            return false; // significa que word no está en el Trie
         }
-        
-        //se marca la palabra como no final para proceder a eliminar la palabra del trie
+
+        // se marca la palabra como no final para proceder a eliminar la palabra del
+        // trie
         nodoActual.setIsEnd(false);
-        
-        while(!stack.isEmpty()){
-            nodoActual = stack.pop(); //recuperamos
-            //se verifica que no se tenga hijos y que no sea un nodo final (significa que el nodo se puede eliminar)
-            if(nodoActual.getChildren().isEmpty() && !nodoActual.isIsEnd()){
+
+        while (!stack.isEmpty()) {
+            nodoActual = stack.pop(); // recuperamos
+            // se verifica que no se tenga hijos y que no sea un nodo final (significa que
+            // el nodo se puede eliminar)
+            if (nodoActual.getChildren().isEmpty() && !nodoActual.isIsEnd()) {
                 TrieNode padre;
                 if (stack.isEmpty()) {
                     padre = this.root;
                 } else {
                     padre = stack.peek();
                 }
-                char caracter = nodoActual.getCaracter(); //caracter del nodo actual
-                padre.getChildren().remove(caracter); //se elimina el caracter y nodo del trie
+                char caracter = nodoActual.getCaracter(); // caracter del nodo actual
+                padre.getChildren().remove(caracter); // se elimina el caracter y nodo del trie
             }
         }
         return true;
@@ -98,7 +102,7 @@ public class Trie {
     public void setRoot(TrieNode root) {
         this.root = root;
     }
-    
+
     public String getSignificado(String palabra) {
         TrieNode nodoActual = this.root;
         for (char caracter : palabra.toCharArray()) {
@@ -109,30 +113,30 @@ public class Trie {
         }
         return nodoActual.getSignificado(palabra); // Devuelve el significado de la palabra
     }
-    
-    
-    public List<String> buscarPorPrefijo(String prefijo){
+
+    public List<String> buscarPorPrefijo(String prefijo) {
         List<String> sugerencias = new ArrayList<>();
         TrieNode nodoActual = this.root;
-        for(char caracter: prefijo.toCharArray()){
+        for (char caracter : prefijo.toCharArray()) {
             nodoActual = nodoActual.getChild(caracter);
-            if(nodoActual == null){
+            if (nodoActual == null) {
                 return sugerencias;
             }
         }
         buscarDesdeNodo(prefijo, nodoActual, sugerencias);
         return sugerencias;
     }
-    
-    //metodo recursivo que recorre el subarbol apartir de un nodo, obteniendo todas las palabras
-    private void buscarDesdeNodo(String prefijo, TrieNode nodo, List<String> sugerencias){
-        //si el prefijo ya es una palabra se lo añade a la lista de sugerencias
-        if(nodo.isIsEnd()){
+
+    // metodo recursivo que recorre el subarbol apartir de un nodo, obteniendo todas
+    // las palabras
+    private void buscarDesdeNodo(String prefijo, TrieNode nodo, List<String> sugerencias) {
+        // si el prefijo ya es una palabra se lo añade a la lista de sugerencias
+        if (nodo.isIsEnd()) {
             sugerencias.add(prefijo);
         }
-        //si no, itera sobre los hijos del nodo
-        for(TrieNode child: nodo.getChildren().values()){
-            //buscar a partir del nuevo prefijo y nuevo hijo
+        // si no, itera sobre los hijos del nodo
+        for (TrieNode child : nodo.getChildren().values()) {
+            // buscar a partir del nuevo prefijo y nuevo hijo
             buscarDesdeNodo(prefijo + child.getCaracter(), child, sugerencias);
         }
     }
@@ -140,8 +144,7 @@ public class Trie {
     public void clear() {
         this.root = new TrieNode('\0'); // se reinicia el trie
     }
-    
-    
+
     public List<String> getPalabras() {
         Set<String> palabras = new TreeSet<>();
 
@@ -165,9 +168,9 @@ public class Trie {
             }
         }
 
-        return new ArrayList<>(palabras); 
+        return new ArrayList<>(palabras);
     }
-    
+
     public List<String> buscarPorTerminacion(String terminacion) {
         List<String> sugerencias = new ArrayList<>();
 
@@ -184,7 +187,7 @@ public class Trie {
             if (nodoActual.isIsEnd() && palabraActual.endsWith(terminacion)) {
                 sugerencias.add(palabraActual);
             }
-            //iteramos sobre los hijos 
+            // iteramos sobre los hijos
             for (TrieNode child : nodoActual.getChildren().values()) {
                 nodeQueue.offer(child);
                 wordQueue.offer(palabraActual + child.getCaracter());
@@ -194,7 +197,6 @@ public class Trie {
         return sugerencias;
     }
 
-    
     public int getTotalWords() {
         int total = 0;
 
@@ -208,7 +210,7 @@ public class Trie {
             if (nodoActual.isIsEnd()) {
                 total++;
             }
-            //iteramos sobre los hijos de ese nodo
+            // iteramos sobre los hijos de ese nodo
             for (TrieNode child : nodoActual.getChildren().values()) {
                 nodeStack.push(child);
             }
@@ -253,7 +255,8 @@ public class Trie {
             TrieNode nodoActual = nodeQueue.poll();
             String palabraActual = wordQueue.poll();
 
-            if (nodoActual.isIsEnd() && palabraActual.length() == consulta.length() && distanciaLevenshtein(palabraActual, consulta) <= maxDistancia) {
+            if (nodoActual.isIsEnd() && palabraActual.length() == consulta.length()
+                    && distanciaLevenshtein(palabraActual, consulta) <= maxDistancia) {
                 sugerencias.add(palabraActual);
             }
 
@@ -265,9 +268,5 @@ public class Trie {
 
         return sugerencias;
     }
-
-
-
-
 
 }
