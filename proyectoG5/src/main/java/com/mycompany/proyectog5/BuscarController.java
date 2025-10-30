@@ -42,6 +42,11 @@ import javafx.stage.Stage;
  */
 public class BuscarController implements Initializable {
 
+    // Search type constants
+    private static final String SEARCH_TYPE_PREFIX = "Prefijo";
+    private static final String SEARCH_TYPE_SUFFIX = "Terminación";
+    private static final String SEARCH_TYPE_APPROXIMATE = "Aproximado";
+
     private Trie diccionario;
 
     @FXML
@@ -67,17 +72,16 @@ public class BuscarController implements Initializable {
 
     @FXML
     private ListView<String> sugerenciasListView;
-    
+
     @FXML
     private Label nombreDiccionario;
-    
+
     private static boolean isGuardado;
     @FXML
     private Button randomBtn;
-    
+
     @FXML
     private ComboBox<String> tipoBusqueda;
-
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -85,30 +89,31 @@ public class BuscarController implements Initializable {
         Diccionario.cargarDiccionario();
         diccionario = Diccionario.getDiccionario();
         this.isGuardado = true;
-        
-        tipoBusqueda.getItems().addAll("Prefijo", "Terminación", "Aproximado");
-        tipoBusqueda.setValue("Prefijo");
+
+        tipoBusqueda.getItems().addAll(SEARCH_TYPE_PREFIX, SEARCH_TYPE_SUFFIX, SEARCH_TYPE_APPROXIMATE);
+        tipoBusqueda.setValue(SEARCH_TYPE_PREFIX);
     }
-    
+
     @FXML
     private void cambiar() throws IOException {
         App.setRoot("menu");
     }
-    
-    //asociado con el boton Buscar
-    //busca la palabra ingresada en el textfield y muestra su significado
+
+    // asociado con el boton Buscar
+    // busca la palabra ingresada en el textfield y muestra su significado
     @FXML
     public void searchWord(ActionEvent event) {
         String palabraRecuperada = busquedaTF.getText().trim();
-        if(palabraRecuperada.isEmpty()){
+        if (palabraRecuperada.isEmpty()) {
             Alert alerta = new Alert(AlertType.ERROR);
             alerta.setTitle("Error de búsqueda");
             alerta.setHeaderText(null);
             alerta.setContentText("Ingrese la palabra a buscar");
             alerta.showAndWait();
-        }else{
-            String word = palabraRecuperada.substring(0,1).toUpperCase() + palabraRecuperada.substring(1).toLowerCase();
-            //diccionario es instancia de Trie
+        } else {
+            String word = palabraRecuperada.substring(0, 1).toUpperCase()
+                    + palabraRecuperada.substring(1).toLowerCase();
+            // diccionario es instancia de Trie
             String significadoPalabra = diccionario.getSignificado(word);
             if (significadoPalabra != null) {
                 palabraBuscada.setText(word);
@@ -125,38 +130,37 @@ public class BuscarController implements Initializable {
             }
         }
     }
-    
-    //se muestran las sugerencias conforme a lo que teclee el usuario
+
+    // se muestran las sugerencias conforme a lo que teclee el usuario
     @FXML
     public void showSuggestion(KeyEvent event) {
         String palabraIngresada = busquedaTF.getText().trim();
-        String tipoBusqueda2 = tipoBusqueda.getSelectionModel().getSelectedItem(); 
-        
-        if(!palabraIngresada.isEmpty()){
+        String tipoBusqueda2 = tipoBusqueda.getSelectionModel().getSelectedItem();
+
+        if (!palabraIngresada.isEmpty()) {
             String word = palabraIngresada.substring(0, 1).toUpperCase() + palabraIngresada.substring(1).toLowerCase();
             List<String> sugerencias = new ArrayList<>();
-            
-            //se verifica el tipo de busqueda
-            if (tipoBusqueda2.equals("Prefijo")) {
+
+            // se verifica el tipo de busqueda
+            if (tipoBusqueda2.equals(SEARCH_TYPE_PREFIX)) {
                 sugerencias = diccionario.buscarPorPrefijo(word);
-            } else if (tipoBusqueda2.equals("Terminación")) {
+            } else if (tipoBusqueda2.equals(SEARCH_TYPE_SUFFIX)) {
                 sugerencias = diccionario.buscarPorTerminacion(palabraIngresada);
-            }else if (tipoBusqueda2.equals("Aproximado")) {
+            } else if (tipoBusqueda2.equals(SEARCH_TYPE_APPROXIMATE)) {
                 int distanciaMaxima = 2; // numero de letras que pueden diferir de la palabra a consultar
                 sugerencias = diccionario.buscarAproximado(word, distanciaMaxima);
             }
-            
+
             sugerenciasListView.getItems().clear();
             sugerenciasListView.getItems().addAll(sugerencias);
-            
+
             sugerenciasListView.setVisible(!sugerencias.isEmpty());
-        }else{
+        } else {
             sugerenciasListView.getItems().clear();
             sugerenciasListView.setVisible(false);
         }
-        
-    }
 
+    }
 
     // Método para seleccionar una sugerencia de autocompletado
     @FXML
@@ -167,21 +171,20 @@ public class BuscarController implements Initializable {
             sugerenciasListView.setVisible(false);
         }
     }
-    
-    //cambia al fxml insert
+
+    // cambia al fxml insert
     @FXML
     public void insertar(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("insert.fxml"));
         Parent parent = loader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(parent));
-        stage.showAndWait(); 
+        stage.showAndWait();
     }
 
     public Trie getDiccionario() {
         return diccionario;
     }
-    
 
     @FXML
     public void cargar(ActionEvent event) {
@@ -200,7 +203,8 @@ public class BuscarController implements Initializable {
                 // Continuar sin guardar
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Seleccione un archivo de diccionario");
-                FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Archivos de texto (*.txt)", "*.txt");
+                FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Archivos de texto (*.txt)",
+                        "*.txt");
                 fileChooser.getExtensionFilters().add(extFilter);
 
                 // Ruta absoluta de la carpeta "Diccionarios"
@@ -219,7 +223,8 @@ public class BuscarController implements Initializable {
             // Si el diccionario está guardado
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Seleccione un archivo de diccionario");
-            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Archivos de texto (*.txt)", "*.txt");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Archivos de texto (*.txt)",
+                    "*.txt");
             fileChooser.getExtensionFilters().add(extFilter);
 
             // Ruta absoluta de la carpeta "Diccionarios"
@@ -239,7 +244,7 @@ public class BuscarController implements Initializable {
     private void cargarDiccionario(File archivo) {
         // Limpiar el Trie antes de cargar el nuevo diccionario
         limpiarCampos();
-        diccionario.clear(); 
+        diccionario.clear();
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -250,7 +255,7 @@ public class BuscarController implements Initializable {
                     diccionario.insert(word, significado);
                 }
             }
-        nombreDiccionario.setText(archivo.getName().replace(".txt", ""));
+            nombreDiccionario.setText(archivo.getName().replace(".txt", ""));
         } catch (IOException ex) {
             ex.printStackTrace();
             Alert alerta = new Alert(AlertType.ERROR);
@@ -260,7 +265,6 @@ public class BuscarController implements Initializable {
             alerta.showAndWait();
         }
     }
-    
 
     @FXML
     public void guardar(ActionEvent event) throws IOException, URISyntaxException {
@@ -291,7 +295,7 @@ public class BuscarController implements Initializable {
 
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoGuardar))) {
                 Trie diccionario = Diccionario.getDiccionario(); // Obtener el diccionario
-                System.out.println("palabras:"+diccionario.getPalabras());
+                System.out.println("palabras:" + diccionario.getPalabras());
                 for (String palabra : diccionario.getPalabras()) {
                     String significado = diccionario.getSignificado(palabra);
                     if (significado != null) {
@@ -309,7 +313,7 @@ public class BuscarController implements Initializable {
                 alertaExito.showAndWait();
             } catch (IOException ex) {
                 ex.printStackTrace();
-                // Manejar el error 
+                // Manejar el error
                 Alert alertaError = new Alert(AlertType.ERROR);
                 alertaError.setTitle("Error al guardar el archivo");
                 alertaError.setHeaderText(null);
@@ -319,19 +323,17 @@ public class BuscarController implements Initializable {
         }
     }
 
-
-
     public void limpiarCampos() {
         busquedaTF.clear();
         palabraBuscada.setText("");
         significado.setText("");
         sugerenciasListView.getItems().clear();
     }
-    
+
     /*
-    Se va a aprovechar del metodo para escoger una plaabra de las sugeridas
-    */
-   @FXML
+     * Se va a aprovechar del metodo para escoger una plaabra de las sugeridas
+     */
+    @FXML
     public void deleteWord(ActionEvent event) {
         // Tomando la palabra del textfield
         String palabraAEliminar = busquedaTF.getText().trim();
@@ -352,7 +354,8 @@ public class BuscarController implements Initializable {
                 Alert confirmacion = new Alert(AlertType.CONFIRMATION);
                 confirmacion.setTitle("Confirmar eliminación");
                 confirmacion.setHeaderText(null);
-                confirmacion.setContentText("¿Estás seguro que deseas eliminar la palabra '" + word + "' del diccionario?");
+                confirmacion
+                        .setContentText("¿Estás seguro que deseas eliminar la palabra '" + word + "' del diccionario?");
 
                 Optional<ButtonType> respuesta = confirmacion.showAndWait();
                 if (respuesta.isPresent() && respuesta.get() == ButtonType.OK) {
@@ -367,7 +370,8 @@ public class BuscarController implements Initializable {
                         alerta.setContentText("La palabra '" + word + "' fue eliminada del diccionario.");
                         alerta.showAndWait();
 
-                        String ruta = System.getProperty("user.dir") + "/Diccionarios/" + nombreDiccionario.getText() + ".txt";
+                        String ruta = System.getProperty("user.dir") + "/Diccionarios/" + nombreDiccionario.getText()
+                                + ".txt";
                         // Arreglo para guardar las líneas del archivo
                         List<String> lines = new ArrayList<>();
                         try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
@@ -395,7 +399,8 @@ public class BuscarController implements Initializable {
                         Alert alerta = new Alert(AlertType.ERROR);
                         alerta.setTitle("Error al eliminar");
                         alerta.setHeaderText(null);
-                        alerta.setContentText("Ocurrió un error al intentar eliminar la palabra '" + word + "' del diccionario.");
+                        alerta.setContentText(
+                                "Ocurrió un error al intentar eliminar la palabra '" + word + "' del diccionario.");
                         alerta.showAndWait();
                     }
                 }
@@ -408,9 +413,9 @@ public class BuscarController implements Initializable {
             }
         }
     }
-    
+
     @FXML
-    public void searchRandom(ActionEvent event){
+    public void searchRandom(ActionEvent event) {
         Random random = new Random();
         String palabraRandom = diccionario.getPalabras().get(random.nextInt(diccionario.getPalabras().size()));
         busquedaTF.setText(palabraRandom);
@@ -420,6 +425,5 @@ public class BuscarController implements Initializable {
     public static void setIsGuardado(boolean isGuardado) {
         BuscarController.isGuardado = isGuardado;
     }
-    
 
 }
