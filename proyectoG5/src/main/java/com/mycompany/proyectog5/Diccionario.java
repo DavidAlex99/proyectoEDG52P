@@ -10,17 +10,23 @@ import java.io.IOException;
  * @author Ariana
  */
 public class Diccionario {
+
+    // Private constructor to prevent instantiation of utility class
+    private Diccionario() {
+        throw new IllegalStateException("Utility class");
+    }
+
     private static Trie diccionario = new Trie();
     private static String nombreDiccionario = "Diccionario General.txt";
-    
+
     public static Trie getDiccionario() {
         return diccionario;
     }
-    
+
     public static void cargarDiccionario() {
         diccionario = new Trie();
-        System.out.println("nombre: "+Diccionario.nombreDiccionario);
-        String rutaDiccionarios = System.getProperty("user.dir") + "/Diccionarios/"+Diccionario.nombreDiccionario;
+        System.out.println("nombre: " + Diccionario.nombreDiccionario);
+        String rutaDiccionarios = System.getProperty("user.dir") + "/Diccionarios/" + Diccionario.nombreDiccionario;
         try (BufferedReader br = new BufferedReader(new FileReader(rutaDiccionarios))) {
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -35,7 +41,8 @@ public class Diccionario {
             ex.printStackTrace();
         }
     }
-    public static void setNombre(String nombre){
+
+    public static void setNombre(String nombre) {
         Diccionario.nombreDiccionario = nombre;
     }
 
