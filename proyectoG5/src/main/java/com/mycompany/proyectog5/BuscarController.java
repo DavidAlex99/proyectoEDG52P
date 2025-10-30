@@ -47,7 +47,6 @@ public class BuscarController implements Initializable {
     private static final String SEARCH_TYPE_SUFFIX = "Terminación";
     private static final String SEARCH_TYPE_APPROXIMATE = "Aproximado";
 
-    // Random instance for random word selection
     private static final Random RANDOM = new Random();
 
     private Trie diccionario;
@@ -254,8 +253,8 @@ public class BuscarController implements Initializable {
                 String[] partes = linea.split(":");
                 if (partes.length == 2) {
                     String word = partes[0].trim();
-                    String significado = partes[1].trim();
-                    diccionario.insert(word, significado);
+                    String significadoTexto = partes[1].trim();
+                    diccionario.insert(word, significadoTexto);
                 }
             }
             nombreDiccionario.setText(archivo.getName().replace(".txt", ""));
@@ -300,9 +299,9 @@ public class BuscarController implements Initializable {
                 Trie diccionario = Diccionario.getDiccionario(); // Obtener el diccionario
                 System.out.println("palabras:" + diccionario.getPalabras());
                 for (String palabra : diccionario.getPalabras()) {
-                    String significado = diccionario.getSignificado(palabra);
-                    if (significado != null) {
-                        bw.write(palabra + " : " + significado);
+                    String significadoPalabra = diccionario.getSignificado(palabra);
+                    if (significadoPalabra != null) {
+                        bw.write(palabra + " : " + significadoPalabra);
                         bw.newLine();
                     }
                 }
